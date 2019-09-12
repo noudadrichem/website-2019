@@ -1,0 +1,75 @@
+{
+  "pages": [
+    {
+      "slug": "/partners",
+      "title": "Partners",
+      "partners": {
+        "title": "Onze partners",
+        "content": {
+          "partners": [
+            {
+              "title": "Snow B.V.",
+              "image": "https://www.indicium.hu/thumbs/200x200r/2019-03/snow-bv-logo.png",
+              "description": "Snow B.V. is een IT-consultancybedrijf dat gespecialiseerd is in Linux en opensource-tools. We werken onder andere voor Nederlandse top-200-bedrijven en bieden hooggekwalificeerde ondersteuning bij het beheer van hun IT-infrastructuur en bedrijfsapplicaties. Onze 110 consultants zijn specialisten op de kennisgebieden system management & integration, architecture, networking, security, cloud, containers en automation. Professionele en persoonlijke ontwikkeling, een veilige werkomgeving en duurzame inzetbaarheid staan bij ons centraal! Wekelijks zijn er bijvoorbeeld trainingen, workshops en meetups over zowel technische vaardigheden (denk aan: Red Hat System Administration en Linux Performance Tuning) als professionele vaardigheden (denk aan: Adviseren als Expert en Krachtig Presenteren). Nergens anders bouw je je cv zo goed op als bij Snow."
+            },
+            {
+              "title": "Snow B.V.",
+              "image": "https://www.indicium.hu/thumbs/200x200r/2019-03/snow-bv-logo.png",
+              "description": "Snow B.V. is een IT-consultancybedrijf dat gespecialiseerd is in Linux en opensource-tools. We werken onder andere voor Nederlandse top-200-bedrijven en bieden hooggekwalificeerde ondersteuning bij het beheer van hun IT-infrastructuur en bedrijfsapplicaties. Onze 110 consultants zijn specialisten op de kennisgebieden system management & integration, architecture, networking, security, cloud, containers en automation. Professionele en persoonlijke ontwikkeling, een veilige werkomgeving en duurzame inzetbaarheid staan bij ons centraal! Wekelijks zijn er bijvoorbeeld trainingen, workshops en meetups over zowel technische vaardigheden (denk aan: Red Hat System Administration en Linux Performance Tuning) als professionele vaardigheden (denk aan: Adviseren als Expert en Krachtig Presenteren). Nergens anders bouw je je cv zo goed op als bij Snow."
+            },
+            {
+              "title": "Snow B.V.",
+              "image": "https://www.indicium.hu/thumbs/200x200r/2019-03/snow-bv-logo.png",
+              "description": "Snow B.V. is een IT-consultancybedrijf dat gespecialiseerd is in Linux en opensource-tools. We werken onder andere voor Nederlandse top-200-bedrijven en bieden hooggekwalificeerde ondersteuning bij het beheer van hun IT-infrastructuur en bedrijfsapplicaties. Onze 110 consultants zijn specialisten op de kennisgebieden system management & integration, architecture, networking, security, cloud, containers en automation. Professionele en persoonlijke ontwikkeling, een veilige werkomgeving en duurzame inzetbaarheid staan bij ons centraal! Wekelijks zijn er bijvoorbeeld trainingen, workshops en meetups over zowel technische vaardigheden (denk aan: Red Hat System Administration en Linux Performance Tuning) als professionele vaardigheden (denk aan: Adviseren als Expert en Krachtig Presenteren). Nergens anders bouw je je cv zo goed op als bij Snow."
+            },
+            {
+              "title": "Snow B.V.",
+              "image": "https://www.indicium.hu/thumbs/200x200r/2019-03/snow-bv-logo.png",
+              "description": "Snow B.V. is een IT-consultancybedrijf dat gespecialiseerd is in Linux en opensource-tools. We werken onder andere voor Nederlandse top-200-bedrijven en bieden hooggekwalificeerde ondersteuning bij het beheer van hun IT-infrastructuur en bedrijfsapplicaties. Onze 110 consultants zijn specialisten op de kennisgebieden system management & integration, architecture, networking, security, cloud, containers en automation. Professionele en persoonlijke ontwikkeling, een veilige werkomgeving en duurzame inzetbaarheid staan bij ons centraal! Wekelijks zijn er bijvoorbeeld trainingen, workshops en meetups over zowel technische vaardigheden (denk aan: Red Hat System Administration en Linux Performance Tuning) als professionele vaardigheden (denk aan: Adviseren als Expert en Krachtig Presenteren). Nergens anders bouw je je cv zo goed op als bij Snow."
+            }
+          ]
+        }
+      }
+    }, {
+      "slug": "/over-indicium",
+      "title": "Over Indicium",
+      "over_ons": {
+        "title": "Over Indicium",
+        "content": {
+          "block_1": {
+            "title": "",
+            "descriptioin": "Een vereniging van HBO-ICT-studenten die studeren aan de Hogeschool Utrecht. Deze hele vereniging wordt draaiende gehouden door deze studenten! "
+          },
+          "block_2": {
+            "title": "Het bestuur",
+            "descriptioin": "In bestuursjaar 2018-2019 hebben we een vierkoppig bestuur. Na hard werken aan het begin van het jaar is er een bestuur gevormd, dat natuurlijk uit alleen maar HBO-ICT-studenten bestaat.",
+            "button": {
+              "text": "Meer weten",
+              "url": "/bestuur"
+            }
+          },
+          "block_3": {
+            "title": "Activiteitencommissie",
+            "descriptioin": ""
+          },
+          "block_4": {
+            "title": "Educatiecommissie",
+            "descriptioin": ""
+          },
+          "block_5": {
+            "title": "Introcommisie",
+            "descriptioin": ""
+          },
+          "block_6": {
+            "title": "Devcommissie",
+            "descriptioin": ""
+          },
+          "block_7": {
+            "title": "Interesse?",
+            "descriptioin": ""
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,3 +1,8 @@
+/* eslint-disable */
+import axios from 'axios'
+import content from './content.json'
+console.log(JSON.stringify(content.pages, null, 2))
+
 export default {
   mode: 'universal',
   server: {
@@ -23,6 +28,12 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicons/favicon.ico'
+    }, {
+      rel: 'stylesheet',
+      href: 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.css'
+    }, {
+      rel: 'stylesheet',
+      href: 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.css'
     }]
   },
   loading: {
@@ -32,8 +43,23 @@ export default {
     '~/node_modules/normalize.css/normalize.css',
     '@/assets/scss/main.scss'
   ],
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/full-calendar', ssr: false }
+  ],
   modules: [],
+  generate: {
+    // routes: () => {
+    //   return axios.get('http://localhost:3000/content.json') // not working :(
+    //     .then(res => {
+    //       return res.data.pages.map(page => {
+    //         return {
+    //           route: page.slug,
+    //           payload: page
+    //         }
+    //       })
+    //     })
+    // }
+  },
   build: {
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {

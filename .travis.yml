@@ -23,7 +23,7 @@ install:
   - npm run generate
 
 script:
-  - sonar-scanner
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sonar-scanner; fi'
   - echo "Skipping tests"
 
 after_success:

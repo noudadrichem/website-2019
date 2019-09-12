@@ -12,65 +12,26 @@
       </ul>
     </div>
 
-    <div class="events">
+    <div v-if="events.length > 0" class="events">
       <EventTile v-for="(event, idx) in events" :key="idx" :event="event" :allCategories="allCategories" />
     </div>
+    <Loading v-else />
   </div>
 </template>
 
 <script>
-import EventTile from '../components/EventTile'
+import axios from 'axios'
+import EventTile from './EventTile'
+import Loading from './Loading'
 
 export default {
   name: 'Events',
   components: {
-    EventTile
+    EventTile,
+    Loading
   },
   data: () => ({
-    events: [
-      {
-        title: 'Title',
-        description: 'Integer dictum arcu vitae magna pulvinar interdum. Quisque semper arcu sed mauris efficitur pulvinar.',
-        date: 1257898,
-        url: '#',
-        categories: ['AI']
-      },
-      {
-        title: 'Title',
-        description: 'Integer dictum arcu vitae magna pulvinar interdum. Quisque semper arcu sed mauris efficitur pulvinar.',
-        date: 1257898,
-        url: '#',
-        categories: ['SD', 'BIM']
-      },
-      {
-        title: 'Title',
-        description: 'Integer dictum arcu vitae magna pulvinar interdum. Quisque semper arcu sed mauris efficitur pulvinar.',
-        date: 1565961457,
-        url: '#',
-        categories: ['TI']
-      },
-      {
-        title: 'Title',
-        description: 'Integer dictum arcu vitae magna pulvinar interdum. Quisque semper arcu sed mauris efficitur pulvinar.',
-        date: 12578989,
-        url: '#',
-        categories: ['SD', 'TI', 'SNE', 'BIM', 'AI']
-      },
-      {
-        title: 'Title',
-        description: 'Integer dictum arcu vitae magna pulvinar interdum. Quisque semper arcu sed mauris efficitur pulvinar. Integer dictum arcu vitae magna pulvinar interdum. Quisque semper arcu sed mauris efficitur pulvinar.',
-        date: 1257898,
-        url: '#',
-        categories: ['SD']
-      },
-      {
-        title: 'Title',
-        description: 'Integer dictum arcu vitae magna pulvinar interdum. Quisque semper arcu sed mauris efficitur pulvinar.',
-        date: 1257898,
-        url: '#',
-        categories: ['TI', 'SD', 'AI']
-      }
-    ],
+    events: [],
     allCategories: [
       {
         courseTitle: 'SD',
@@ -93,7 +54,30 @@ export default {
         hex: '72E1AD'
       },
     ]
-  })
+  }),
+  mounted() {
+    axios.get('https://indicium.hu/json/events?page%5Bsize%5D=1000')
+      .then((response) => {
+        const events = response.data.data
+        const today = new Date().getTime()
+        const featureEvents = events
+          .filter(evt => new Date(evt.attributes.start).getTime() > today)
+          .map(evt => ({
+            title: evt.attributes.title,
+            description: this.stripHTMLFromString(evt.attributes.contentblocks[0].content),
+            date: new Date(evt.attributes.start).getTime() / 1000,
+            url: `evenement/${evt.attributes.slug}`,
+            categories: evt.attributes.categories
+          }))
+
+        this.$set(this, 'events', featureEvents)
+      })
+  },
+  methods: {
+    stripHTMLFromString(str = '') {
+      return str.replace(/(<([^>]+)>)/ig, '').replace(/\n|\r/g, '')
+    }
+  }
 }
 </script>
 
@@ -137,6 +121,5 @@ export default {
     flex-direction: row;
     flex-wrap: wrap;
   }
-
 }
 </style>

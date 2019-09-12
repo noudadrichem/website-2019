@@ -1,7 +1,7 @@
 <template>
   <div class="heading">
-    <AnimatedLine :top="0" right="-10px" :interval="3000" />
-    <AnimatedLine right="75px" :bottom="0" :interval="5000" :rotate="90"/>
+    <AnimatedLine :top="0" right="-10px" :interval="2000" />
+    <AnimatedLine right="75px" :bottom="0" :interval="4000" :rotate="90"/>
     <AnimatedLine right="115px" :bottom="0" :interval="6000" :rotate="90"/>
     <AnimatedLine :left="0" top="50px" :interval="8000" :rotate="180"/>
 
@@ -11,10 +11,10 @@
       <h1>Wij zijn de <span class="bold">studie</span>vereniging voor HBO-ICT van Hogeschool Utrecht</h1>
 
       <div class="buttons">
-        <Button size="l" :onClick="signUp">
-          Word lid
+        <Button size="l" :onClick="signUp" url="https://docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform">
+          Wordt lid
         </Button>
-        <TextLink :callback="navigateToCalendar">
+        <TextLink url="/activiteiten">
           Bekijk agenda
         </TextLink>
       </div>
@@ -73,6 +73,5 @@ export default {
       }
     }
   }
-
 }
 </style>
