@@ -48,18 +48,17 @@ export default {
   ],
   modules: [],
   generate: {
-    interval: 100,
-    routes: () => {
-      return axios.get('http://localhost:3000/content.json') // not working :(
-        .then(res => {
-          return res.data.pages.map(page => {
-            return {
-              route: page.slug,
-              payload: page
-            }
-          })
-        })
-    }
+    // routes: () => {
+    //   return axios.get('http://localhost:3000/content.json') // not working :(
+    //     .then(res => {
+    //       return res.data.pages.map(page => {
+    //         return {
+    //           route: page.slug,
+    //           payload: page
+    //         }
+    //       })
+    //     })
+    // }
   },
   build: {
     extend(config, ctx) {

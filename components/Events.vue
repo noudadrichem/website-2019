@@ -56,10 +56,6 @@ export default {
     ]
   }),
   mounted() {
-    axios.get('http://localhost:3000/content.json')
-      .then((res) => {
-        console.log(res)
-      })
     axios.get('https://indicium.hu/json/events?page%5Bsize%5D=1000')
       .then((response) => {
         const events = response.data.data

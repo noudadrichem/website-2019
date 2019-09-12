@@ -1,7 +1,7 @@
 {
   "pages": [
     {
-      "slug": "/partners",
+      "slug": "partners",
       "title": "Partners",
       "partners": {
         "title": "Onze partners",
@@ -31,7 +31,7 @@
         }
       }
     }, {
-      "slug": "/over-indicium",
+      "slug": "over-indicium",
       "title": "Over Indicium",
       "over_ons": {
         "title": "Over Indicium",
