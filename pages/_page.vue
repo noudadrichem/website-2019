@@ -1,8 +1,28 @@
 <template>
-  <div>
-    <h1>Page</h1>
+  <div class="container">
+    <h1>{{ page.title }}</h1>
 
-    {{ $data }}
+    <div v-for="(contentObj, idx) in page.content" :key="idx">
+
+      <!-- {{ idx }} :{{ contentObj }} -->
+
+      <div v-if="contentObj.type === 'text-center'">
+
+      </div>
+      <div v-if="contentObj.type === 'text-left'">
+
+      </div>
+      <div v-if="contentObj.type === 'text-right'">
+
+      </div>
+      <div v-if="contentObj.type === 'image-left'">
+
+      </div>
+      <div v-if="contentObj.type === 'image-righ'">
+
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -20,6 +40,7 @@ export default {
   mounted() {
     const pageData = content.pages.find(p => p.slug === this.$route.params.page)
     this.$set(this, 'page', pageData)
+    console.log({ pageData })
   }
 }
 </script>
