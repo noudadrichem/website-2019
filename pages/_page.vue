@@ -15,14 +15,7 @@ export default {
     page: {}
   }),
   validate({ params }) {
-    let pageExists = false
-    content.pages.forEach(page => {
-      if(page.slug === params.page) {
-        pageExists = true
-        return pageExists
-      }
-    })
-    return pageExists
+    return content.pages.some(page => page.slug === params.page)
   },
   mounted() {
     const pageData = content.pages.find(p => p.slug === this.$route.params.page)
