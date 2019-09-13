@@ -18,6 +18,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   name: 'Nav',
   computed: {
@@ -26,25 +27,26 @@ export default {
     }
   },
   data: () => ({
-    items: [{
-      title: 'Contact',
-      url: '#'
-    },
-    {
-      title: 'Partners',
-      url: '#'
+    items: [
+      {
+        title: 'Partners',
+      url: '/partners'
     },
     {
       title: 'Activiteiten',
       url: '/activiteiten'
     },
     {
-      title: 'Commissies',
-      url: '#'
+      title: Math.random() > 0.7 ? 'Over Indicium' : 'Commissies',
+      url: '/over-indicium'
+    },
+    {
+      title: 'Contact',
+      url: '/contact'
     },
     {
       title: 'Lid worden',
-      url: '#'
+      url: 'https://docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform'
     }]
   })
 }

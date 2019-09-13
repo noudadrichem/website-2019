@@ -1,36 +1,44 @@
 <template>
+<div :class="['page', $route.params.page]">
   <div class="container">
-    <h1>{{ page.title }}</h1>
-
     <div v-for="(contentObj, idx) in page.content" :key="idx">
 
-      <!-- {{ idx }} :{{ contentObj }} -->
-
-      <div v-if="contentObj.type === 'text-center'">
-
-      </div>
-      <div v-if="contentObj.type === 'text-left'">
-
-      </div>
-      <div v-if="contentObj.type === 'text-right'">
-
-      </div>
-      <div v-if="contentObj.type === 'image-left'">
-
-      </div>
-      <div v-if="contentObj.type === 'image-righ'">
-
+      <div v-if="contentObj.type.startsWith('text')">
+        <TextBlock
+          :type="contentObj.type"
+          :title="contentObj.title"
+          :subTitle="contentObj.subTitle"
+          :text="contentObj.description"
+          :button="contentObj.button"
+        />
       </div>
 
+      <div v-if="contentObj.type.startsWith('image')">
+        <ImageBlock
+          :type="contentObj.type"
+          :title="contentObj.title"
+          :text="contentObj.description"
+          :image="contentObj.imgUrl"
+          :button="contentObj.button"
+        />
+      </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
 /* eslint-disable */
 import content from '../content.json'
 
+import TextBlock from '../components/TextBlock'
+import ImageBlock from '../components/ImageBlock'
+
 export default {
+  components: {
+    TextBlock,
+    ImageBlock
+  },
   data:() => ({
     page: {}
   }),
@@ -44,3 +52,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.page {
+  padding: 24px 0 64px 0;
+}
+</style>

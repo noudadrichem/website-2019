@@ -13,7 +13,7 @@ export default {
   props: {
     onClick: {
       type: Function,
-      required: true,
+      required: false,
     },
     size: {
       type: String,
@@ -28,9 +28,6 @@ export default {
       type: String,
       default: '#'
     }
-  },
-  mounted() {
-    console.log('button mounted is center?', this.center)
   }
 }
 </script>

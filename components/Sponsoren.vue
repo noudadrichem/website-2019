@@ -1,8 +1,8 @@
 <template>
   <div class="sponsoren">
     <ul>
-      <li v-for="n in 8" :key="n">
-        <img src="https://via.placeholder.com/94x63/f2" alt="sponsor logo title" />
+      <li v-for="(s, idx) in sponsoren" :key="idx">
+        <img :src="s.path" alt="sponsor logo title" />
       </li>
     </ul>
   </div>
@@ -10,7 +10,32 @@
 
 <script>
 export default {
-  name: 'Sponsoren'
+  name: 'Sponsoren',
+  data: () => ({
+    sponsoren: [
+      {
+        path: '/partners/axians-logo.png'
+      },
+      {
+        path: '/partners/bpm-logo.png'
+      },
+      {
+        path: '/partners/cambridgebar-logo.png'
+      },
+      {
+        path: '/partners/experius-logo.png'
+      },
+      {
+        path: '/partners/ordina-logo.svg'
+      },
+      {
+        path: '/partners/snow-logo.svg'
+      },
+      {
+        path: '/partners/sogeti-logo.svg'
+      }
+    ]
+  })
 }
 </script>
 
@@ -26,6 +51,25 @@ export default {
     display: flex;
     overflow: auto;
     justify-content: space-between;
+
+    li  {
+      max-width: 108px;
+      display: inline-flex;
+      align-items: center;
+
+      &:hover {
+        img {
+          filter: grayscale(0%);
+        }
+      }
+
+      img {
+        max-width: 100%;
+        filter: grayscale(100%);
+        transition: all 200ms;
+      }
+
+    }
   }
 }
 </style>
