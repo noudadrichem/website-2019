@@ -28,23 +28,23 @@ export default {
   data: () => ({
     items: [{
       title: 'Contact',
-      url: '#'
+      url: '/contact'
     },
     {
       title: 'Partners',
-      url: '#'
+      url: '/partners'
     },
     {
       title: 'Activiteiten',
       url: '/activiteiten'
     },
     {
-      title: 'Commissies',
-      url: '#'
+      title: Math.random() > 0.7 ? 'Over Indicium' : 'Commissies',
+      url: '/over-indicium'
     },
     {
       title: 'Lid worden',
-      url: '#'
+      url: 'https://docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform'
     }]
   })
 }

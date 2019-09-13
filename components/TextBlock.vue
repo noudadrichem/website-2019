@@ -1,54 +1,57 @@
 <template>
-  <div v-if="type === 'center'" :class="['text-block', type]">
-    <h1>{{ title }}</h1>
-    <p>{{ text }}</p>
-    <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l" :center="type === 'center'" :url="url">
-      {{ readMoreButtonText }}
+  <div v-if="type === 'text-center'" :class="['text-block', type, { contained }]">
+    <h1 v-if="title">{{ title }}</h1>
+    <h4 v-if="subTitle">{{ subTitle }}</h4>
+    <p v-if="text" v-html="text"></p>
+
+    <Button v-if="button" size="l" :center="type === 'center'" :url="button.url">
+      {{ button.text }}
     </Button>
   </div>
 
-  <div v-else-if="type === 'left-image'" :class="['text-block', type]">
-    <div class="image">
-      <img :src="image" alt="sponsor logo title" />
-    </div>
-    <div class="text">
-      <h1>{{ title }}</h1>
-      <p>{{ text }}</p>
-      <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l" :url="url">
-        {{ readMoreButtonText }}
-      </Button>
-    </div>
+  <div v-else-if="type === 'text-left'" :class="['text-block', type, { contained }]">
+    <h1 v-if="title">{{ title }}</h1>
+    <h4 v-if="subTitle">{{ subTitle }}</h4>
+    <p v-if="text" v-html="text"></p>
+
+    <Button v-if="button" size="l" :center="type === 'center'" :url="button.url">
+      {{ button.text }}
+    </Button>
   </div>
 
-  <div v-else-if="type === 'right-image'" :class="['text-block', type]">
-    <div class="text">
-      <h1>{{ title }}</h1>
-      <p>{{ text }}</p>
-      <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l" :url="url">
-        {{ readMoreButtonText }}
-      </Button>
-    </div>
-    <div class="image">
-      <img :src="image" alt="sponsor logo title" />
-    </div>
+  <div v-else-if="type === 'text-right'" :class="['text-block', type, { contained }]">
+    <h1 v-if="title">{{ title }}</h1>
+    <h4 v-if="subTitle">{{ subTitle }}</h4>
+    <p v-if="text" v-html="text"></p>
+
+    <Button v-if="button" size="l" :center="type === 'center'" :url="button.url">
+      {{ button.text }}
+    </Button>
   </div>
 
   <div v-else class="text-block">
-    <h1>{{ title }}</h1>
-    <p>{{ text }}</p>
-    <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l" :url="url">
-      {{ readMoreButtonText }}
+    <h1 v-if="title">{{ title }}</h1>
+    <h4 v-if="subTitle">{{ subTitle }}</h4>
+    <p v-if="text" v-html="text"></p>
+
+    <Button v-if="button" size="l" :url="button.url">
+      {{ button.text }}
     </Button>
   </div>
 </template>
 
 <script>
+/* eslint-disable */
 import Button from './interactions/button'
 
 export default {
   name: 'TextBlock',
   components: { Button },
   props: {
+    contained: {
+      type: Boolean,
+      default: false
+    },
     type: {
       type: String,
       default: ''
@@ -59,72 +62,39 @@ export default {
     },
     title: {
       type: String,
-      default: 'title'
+    },
+    subTitle: {
+      type: String,
     },
     text: {
       type: String,
-      default: 'text'
-    },
-    image: {
-      type: String,
-      default: 'https://via.placeholder.com/348x408/f2'
-    },
-    readMoreCallback: {
-      type: Function,
-      default: () => {
-        console.log('Clicked read more')
-      }
-    },
-    readMoreButtonText: {
-      type: String,
       default: ''
+    },
+    button: {
+      type: Object,
+      default: null
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .text-block {
-  max-width: 928px;
-  margin: 0 auto;
-  padding: 96px 0;
+  margin: 0 auto 32px;
 
-  &.center {
+  &.contained {
+    max-width: 928px;
+  }
+
+  &.text-center {
     text-align: center;
     @media screen and (max-width: 414px) {
       margin: 0 16px;
     }
   }
 
-  &.left-image, &.right-image {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    .image {
-      flex-grow: 1;
-      flex-basis: calc(50% - 32px);
-      padding: 0 16px;
-      min-width: 348px;
-      @media screen and (min-width: 414px) {
-        margin-top: 32px;
-      }
-      img {
-        display: block;
-        max-width: 100%;
-      }
-    }
-    .text {
-      flex-grow: 1;
-      flex-basis: calc(50% - 32px);
-      padding: 0 16px;
-    }
-  }
-  &.right-image Button {
-    margin-bottom: 8px;
-  }
-  Button {
-    display: inherit;
+  &.text-right {
+    text-align: right;
   }
 }
 </style>
