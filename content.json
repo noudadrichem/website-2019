@@ -11,7 +11,7 @@
         },
         {
           "type": "image",
-          "image": "https://via.placeholder.com/1000x400/f2f2f2"
+          "imgUrl": "https://via.placeholder.com/1000x400/f2f2f2"
         },
         {
           "title": "Commissies",
@@ -35,7 +35,7 @@
           "title": "Devcommissie",
           "description": "descripiton",
           "type": "image-left",
-          "imgUrl": "https://via.placeholder.com/300x250/f2f2f2"
+          "imgUrl": "https://via.placeholder.com/300/f2f2f2"
         },
         {
           "subTitle": "Educatiecommissie",
@@ -55,7 +55,7 @@
           "content": [
             {
               "title": "BPM Company",
-              "description": "Een specialist in digitalisering van organisaties. technologische veranderingen volgen elkaar steeds sneller op, organisaties moeten op deze ontwikkelingen inspelen en er in mee gaan. het is onze missie om onze klanten digitaal toekomst vast te maken. bij bpm company staat kwaliteit voorop, we willen niet de grootste zijn maar wel de beste in wat we doen. daarom is het belangrijk dat onze mensen werkzaamheden doen die ze leuk vinden zodat ze het met passie doen. het mes snijdt aan twee kanten. werkzaamheden die je leuk vindt daar ben je meestal ook goed in. en als je goede software bouwt dan leidt dit tot tevreden klanten en lange termijn relaties met klanten.",
+              "description": "Een specialist in digitalisering van organisaties. Technologische veranderingen volgen elkaar steeds sneller op, organisaties moeten op deze ontwikkelingen inspelen en er in mee gaan. Het is onze missie om onze klanten digitaal toekomst vast te maken. Bij BPM Company staat kwaliteit voorop, we willen niet de grootste zijn maar wel de beste in wat we doen. Daarom is het belangrijk dat onze mensen werkzaamheden doen die ze leuk vinden zodat ze het met passie doen. Het mes snijdt aan twee kanten. Werkzaamheden die je leuk vindt daar ben je meestal ook goed in. En als je goede software bouwt dan leidt dit tot tevreden klanten en lange termijn relaties met klanten. BPM Company is in 2011 gestart omdat we het gevoel hadden dat het bouwen van software beter kan.Daarom zijn we gaan werken met model gedreven software platformen van Pegasystems en Mendix.Onze professionals werken met heel veel plezier en passie met deze platformen.En deze gedrevenheid werd beloond.Al na 4 jaar wonnen we een Computable award voor het beste ICT project in het MKB segment.Jaar na jaar horen we bij de snel groeiende bedrijven van Nederland.We zijn hier trots op en hopen dit nog jaren te blijven doen.",
               "imgUrl": "http://indicium.hu/thumbs/200x200r/2019-04/bpm-company-logo-300dpi.jpg",
               "type": "image-left",
               "button": {
@@ -64,9 +64,9 @@
               }
             },
             {
-              "title": "BPM Company",
-              "description": "Een specialist in digitalisering van organisaties. technologische veranderingen volgen elkaar steeds sneller op, organisaties moeten op deze ontwikkelingen inspelen en er in mee gaan. het is onze missie om onze klanten digitaal toekomst vast te maken. bij bpm company staat kwaliteit voorop, we willen niet de grootste zijn maar wel de beste in wat we doen. daarom is het belangrijk dat onze mensen werkzaamheden doen die ze leuk vinden zodat ze het met passie doen. het mes snijdt aan twee kanten. werkzaamheden die je leuk vindt daar ben je meestal ook goed in. en als je goede software bouwt dan leidt dit tot tevreden klanten en lange termijn relaties met klanten.",
-              "imgUrl": "http://indicium.hu/thumbs/200x200r/2019-04/bpm-company-logo-300dpi.jpg",
+              "title": "Axians Integrated Solutions",
+              "description": "Wat wij doen? We optimaliseren de bedrijfskritische informatievoorziening door het ontsluiten, bouwen en beheren van API’s. Wij leggen dwarsverbanden tussen systemen en apparaten, om zo (keten)data te verrijken en te visualiseren o.b.v. de technologieën van Red Hat en Microsoft Azure. In afstemming met onze klanten werken wij bij voorkeur agile en omarmen wij de open source gedachte.Je komt terecht in een team met ca.40 medewerkers, waarin zowel JAVA ontwikkelaars, .Net ontwikkelaars en Mendix ontwikkelaars(Mendix is een rapid application platform) werken.We werken met elkaar samen aan verschillende leuke projecten, bijvoorbeeld bij Landal GreenParks en CenterParcs.Hier zijn we bezig met home automation: als de gast in het vakantiehuisje aankomt, dan is het huisje van tevoren al opgewarmd(het tempatuursysteem wordt dus gekoppeld aan het planningssysteem).We werken aan een systeem dat facturen opstelt voor betaling naar de eigenaar / verhuurder van de huisjes;hier wordt data opgehaald uit een ander systeem van Landal, waarbij er een aantal berekeningen wordt uitgevoerd op basis van een lijst functionele regels bij CenterParcs wordt er gewerkt aan een applicatie om de data van verschillende losse applicaties centraal te kunnen beheren en inzien.",
+              "imgUrl": "http://indicium.hu/thumbs/200x200r/2019-04/axians-logo-pms.svg",
               "type": "image-right",
               "button": {
                 "text": "Bezoek website",

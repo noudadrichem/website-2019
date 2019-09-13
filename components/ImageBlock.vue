@@ -6,8 +6,8 @@
     <div class="text">
       <h1>{{ title }}</h1>
       <p>{{ text }}</p>
-      <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l" :url="url">
-        {{ readMoreButtonText }}
+      <Button v-if="button" size="l" :url="url">
+        {{ button.text }}
       </Button>
     </div>
   </div>
@@ -17,8 +17,8 @@
       <h1>{{ title }}</h1>
       <p>{{ text }}</p>
 
-      <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l" :url="url">
-        {{ readMoreButtonText }}
+      <Button v-if="button" size="l" :url="url">
+        {{ button.text }}
       </Button>
     </div>
     <div class="image">
@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <div v-else>
+  <div v-else class="image-block full-width">
     <img :src="image" />
   </div>
 </template>
@@ -56,17 +56,11 @@ export default {
     },
     image: {
       type: String,
-      default: 'https://via.placeholder.com/348x408/f2'
-    },
-    readMoreCallback: {
-      type: Function,
-      default() {
-        console.log('Clicked read more')
-      }
-    },
-    readMoreButtonText: {
-      type: String,
       default: ''
+    },
+    button: {
+      type: Object,
+      default: null
     }
   }
 }
@@ -76,7 +70,12 @@ export default {
 .image-block {
   max-width: 928px;
   margin: 0 auto;
-  padding: 96px 0;
+
+  &.full-width {
+    img {
+      width: 100%;
+    }
+  }
 
   &.image-right, &.image-left {
     display: flex;
@@ -88,6 +87,10 @@ export default {
       flex-basis: calc(50% - 32px);
       padding: 0 16px;
       min-width: 348px;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+
       @media screen and (min-width: 414px) {
         margin-top: 32px;
       }

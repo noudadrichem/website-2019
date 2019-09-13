@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 * {
   box-sizing: border-box;
@@ -60,5 +60,9 @@ export default {
 
 body {
   font-family: 'Roboto', sans-serif;
+
+  .text-block, .image-block {
+    padding: 80px 0;
+  }
 }
 </style>

@@ -18,6 +18,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   name: 'Nav',
   computed: {
@@ -26,12 +27,9 @@ export default {
     }
   },
   data: () => ({
-    items: [{
-      title: 'Contact',
-      url: '/contact'
-    },
-    {
-      title: 'Partners',
+    items: [
+      {
+        title: 'Partners',
       url: '/partners'
     },
     {
@@ -41,6 +39,10 @@ export default {
     {
       title: Math.random() > 0.7 ? 'Over Indicium' : 'Commissies',
       url: '/over-indicium'
+    },
+    {
+      title: 'Contact',
+      url: '/contact'
     },
     {
       title: 'Lid worden',

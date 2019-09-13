@@ -3,7 +3,10 @@
     <AnimatedLine :top="0" right="-10px" :interval="2000" />
     <AnimatedLine right="75px" :bottom="0" :interval="4000" :rotate="90"/>
     <AnimatedLine right="115px" :bottom="0" :interval="6000" :rotate="90"/>
-    <AnimatedLine :left="0" top="50px" :interval="8000" :rotate="180"/>
+    <AnimatedLine :left="0" top="128px" :interval="8000" :rotate="180"/>
+
+    <AnimatedLine left="20%" bottom="-50px" :interval="4500" :rotate="135" v-if="thisWindow.innerWidth > 1500" />
+    <AnimatedLine left="-150px" top="-100px" :interval="6000" :rotate="225" v-if="thisWindow.innerWidth > 1500" />
 
     <div class="heading-content">
       <img src="/logo/indicium-logo-top.svg" alt="Indicium Logo" />
@@ -33,6 +36,13 @@ export default {
     Button,
     TextLink,
     AnimatedLine
+  },
+  computed: {
+    thisWindow() {
+      if (process.client) {
+        return window;
+      }
+    }
   },
   methods: {
     navigateToCalendar() {
