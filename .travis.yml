@@ -25,6 +25,7 @@ install:
 script:
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sonar-scanner; fi'
   - echo "Skipping tests"
+  - npm run build
 
 after_success:
   - docker build -t indicium:website .
