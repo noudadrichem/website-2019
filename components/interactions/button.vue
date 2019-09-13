@@ -1,7 +1,10 @@
 <template>
-  <button :class="['btn', size, center ? 'center' : '']" @click="onClick">
+  <a v-if="url.startsWith('http')" :href="url" :class="['btn', size, center ? 'center' : '']" @click="onClick">
     <slot></slot>
-  </button>
+  </a>
+  <n-link v-else :to="url" :class="['btn', size, center ? 'center' : '']" @click="onClick">
+    <slot></slot>
+  </n-link>
 </template>
 
 <script>
@@ -20,6 +23,10 @@ export default {
     center: {
       type: Boolean,
       default: false
+    },
+    url: {
+      type: String,
+      default: '#'
     }
   },
   mounted() {

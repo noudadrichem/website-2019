@@ -2,7 +2,7 @@
   <div v-if="type === 'center'" :class="['text-block', type]">
     <h1>{{ title }}</h1>
     <p>{{ text }}</p>
-    <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l" :center="type === 'center'">
+    <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l" :center="type === 'center'" :url="url">
       {{ readMoreButtonText }}
     </Button>
   </div>
@@ -14,7 +14,7 @@
     <div class="text">
       <h1>{{ title }}</h1>
       <p>{{ text }}</p>
-      <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l">
+      <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l" :url="url">
         {{ readMoreButtonText }}
       </Button>
     </div>
@@ -24,7 +24,7 @@
     <div class="text">
       <h1>{{ title }}</h1>
       <p>{{ text }}</p>
-      <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l">
+      <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l" :url="url">
         {{ readMoreButtonText }}
       </Button>
     </div>
@@ -36,7 +36,7 @@
   <div v-else class="text-block">
     <h1>{{ title }}</h1>
     <p>{{ text }}</p>
-    <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l">
+    <Button v-if="readMoreButtonText !== ''" :onClick="readMoreCallback" size="l" :url="url">
       {{ readMoreButtonText }}
     </Button>
   </div>
@@ -52,6 +52,10 @@ export default {
     type: {
       type: String,
       default: ''
+    },
+    url: {
+      type: String,
+      default: '#'
     },
     title: {
       type: String,

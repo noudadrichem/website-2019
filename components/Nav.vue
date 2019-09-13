@@ -1,39 +1,51 @@
 <template>
   <nav class="nav">
-    <ul>
-      <li v-for="item in items" :key="item.title + item.url">
-        <a :href="item.url">{{ item.title }}</a>
-      </li>
-    </ul>
+    <div class="container flex">
+      <div v-if="!isHome" class="logo">
+        <n-link to="/">
+          <img src="/logo/indicium-logo-left.svg" alt="Indicium Logo" />
+        </n-link>
+      </div>
+
+      <ul :style="{ margin: isHome ? '0 auto' : '0'}">
+        <li v-for="item in items" :key="item.title + item.url">
+          <a v-if="item.url.startsWith('http')" :href="item.url">{{ item.title }}</a>
+          <n-link v-else :to="item.url" prefetch>{{ item.title }}</n-link>
+        </li>
+      </ul>
+    </div>
   </nav>
 </template>
 
 <script>
 export default {
   name: 'Nav',
+  computed: {
+    isHome() {
+      return this.$route.path === '/'
+    }
+  },
   data: () => ({
-    items: [
-      {
-        title: 'Contact',
-        url: '#'
-      },
-      {
-        title: 'Partners',
-        url: '#'
-      },
-      {
-        title: 'Agenda',
-        url: '#'
-      },
-      {
-        title: 'Commissies',
-        url: '#'
-      },
-      {
-        title: 'Lid worden',
-        url: '#'
-      },
-    ]
+    items: [{
+      title: 'Contact',
+      url: '#'
+    },
+    {
+      title: 'Partners',
+      url: '#'
+    },
+    {
+      title: 'Activiteiten',
+      url: '/activiteiten'
+    },
+    {
+      title: 'Commissies',
+      url: '#'
+    },
+    {
+      title: 'Lid worden',
+      url: '#'
+    }]
   })
 }
 </script>
@@ -44,12 +56,19 @@ export default {
   background: #fff;
   box-shadow: inset 0 -2px 0 0 #cecfcf;
 
+  .logo {
+    img {
+      max-width: 204px;
+    }
+  }
+
   ul {
     list-style: none;
     display: flex;
     max-width: 984px;
-    margin: 0 auto;
+    // margin: 0 auto;
     justify-content: space-between;
+    align-items: center;
     overflow: auto;
 
     li {
