@@ -5,6 +5,9 @@
     <AnimatedLine right="115px" :bottom="0" :interval="6000" :rotate="90"/>
     <AnimatedLine :left="0" top="128px" :interval="8000" :rotate="180"/>
 
+    <!-- <AnimatedLine left="20%" bottom="-50px" :interval="4500" :rotate="135" /> -->
+    <!-- <AnimatedLine left="-150px" top="-100px" :interval="6000" :rotate="225" /> -->
+
     <div class="heading-content">
       <img src="/logo/indicium-logo-top.svg" alt="Indicium Logo" />
 

@@ -1,10 +1,12 @@
 <template>
   <div class="sponsoren">
+    <h5 class="center">Sponsoren</h5>
     <ul>
       <li v-for="(s, idx) in sponsoren" :key="idx">
         <img :src="s.path" alt="sponsor logo title" />
       </li>
     </ul>
+
   </div>
 </template>
 
@@ -41,9 +43,13 @@ export default {
 
 <style lang="scss">
 .sponsoren {
-  padding: 32px 0;
+  padding: 8px 0 32px;
   background: #fff;
   box-shadow: inset 0 -1px 0 0 #C6D1E0, inset 0 1px 0 0 #C6D1E0;
+
+  h5 {
+    margin-bottom: 16px;
+  }
 
   ul {
     max-width: 1280px;
