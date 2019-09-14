@@ -3,7 +3,7 @@
     <AnimatedLine :top="0" right="-10px" :interval="2000" />
     <AnimatedLine right="75px" :bottom="0" :interval="4000" :rotate="90"/>
     <AnimatedLine right="115px" :bottom="0" :interval="6000" :rotate="90"/>
-    <AnimatedLine :left="0" top="128px" :interval="8000" :rotate="180"/>
+    <AnimatedLine :left="0" top="28px" :interval="8000" :rotate="180"/>
 
     <!-- <AnimatedLine left="20%" bottom="-50px" :interval="4500" :rotate="135" /> -->
     <!-- <AnimatedLine left="-150px" top="-100px" :interval="6000" :rotate="225" /> -->

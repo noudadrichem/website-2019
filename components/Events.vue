@@ -12,10 +12,13 @@
       </ul>
     </div>
 
-    <div v-if="events.length > 0" class="events">
+    <div v-if="!isLoading && events.length > 0" class="events">
       <EventTile v-for="(event, idx) in events" :key="idx" :event="event" :allCategories="allCategories" />
     </div>
-    <Loading v-else />
+    <Loading v-else-if="isLoading" />
+    <div v-else-if="!isLoading && events.length === 0">
+      <p class="center">Geen toekomstige activiteiten gevonden.</p>
+    </div>
   </div>
 </template>
 
@@ -31,6 +34,7 @@ export default {
     Loading
   },
   data: () => ({
+    isLoading: true,
     events: [],
     allCategories: [
       {
@@ -70,6 +74,7 @@ export default {
             categories: evt.attributes.categories
           }))
 
+        this.$set(this, 'isLoading', false)
         this.$set(this, 'events', featureEvents)
       })
   },
