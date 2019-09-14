@@ -10,6 +10,11 @@ services:
 node_js:
   - "10.8.0"
 
+env:
+  global:
+    secure: "QykKHxCXS3At+/EoaVNPOfP7r74h2zrbtI3/8PO6AJSfGrpKzWPgyUcoWhIk/rTHesqg+3tdf8Vk+yNh+9vKKEVktj2FVtG6LZVeiVd0gBl2EYO9t4271DYTfsWonGmN3W7owej+brtYLyJ7Ov9Hv15hJpzLGjn0yDw5Y/K7DuLGOnqqUcyRLPyw99OgojgLp3gh91+VV4aGhzYKIYYOoVA648sZyfqYhnTzjDs4I/w/Xx+vidac3n4e3nhQ3lZuLwlv9dOeVgpNxQKuM0rXKMCztnFhTS8MgpmCQ/vZ8SERbNp7CTQ59ht3/KvbVVwe6rVCB1cyvtbb01PiJEMBtb3NRsbGEGycbMXOaHu8zuQ/Gj7yPPgHmFflOyQ+jftSrUwrggtNRpyLZam8TZpyDt+DWZ/U67ps8iC4qAa9KRIW5ZfX7SYaGWzpmccxNqxFKeti1UqRK0KPoYEOLKGnlYawa/L2BUZ0ZondNoMF59r89rBCbwONb8jY8qfzIL7HADfU7ZwOQP8HcjkzkiRVzY9PHwHkgS3IxLKg69ctyXv/RVT4qHbQrS/tRdScS6hnxPQSLRXBMvYTPKParUkKTMaCI9AxT3biixjJMwQaLaiucm1AtuI073kYA5edjhVNYwGloZJvwA+qf7QUxxXD/vcfYnFTglLiaWBWGyRZbGw="
+
+
 addons:
   sonarcloud:
     organization: "indicium"
@@ -25,6 +30,7 @@ install:
 script:
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sonar-scanner; fi'
   - echo "Skipping tests"
+  - echo $DOCKER_USER
   - npm run build
 
 after_success:
