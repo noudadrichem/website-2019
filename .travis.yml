@@ -22,7 +22,9 @@ env:
 addons:
   sonarcloud:
     organization: "indicium"
-    token: $SONAR_TOKEN
+    token:
+      secure: "qM9k9yEyv+VA7WlILdlYdRyKZzWaa+b88wnihnMo3z0Ync1lvkIynljWeYfGYfGvMDnMO4upgWiEbU/Ks4Gmha+IMEuqDVFYTNY7HYO52s+P+MY01yuh0eOMSRJftYdFwQq7CZFXytenCb9ZgAQh8k2lVlkDOEFylT0WcGHOrgkaKRImD/5WrzJr2FlwdULxyJjkqgN8itNMKKbNjgcyTUMEhsAxc7yqAuX6CXSPK58gXU2G+GpThYhnSh+7zUZOfAfp9LzKjUdUPBGDqCpnUIM83FXG1vcEt0iy7iHQIBqvNttQEwC63Vi6MwsTTLbIBCmqnbzh8qdQ+1jmJaE9l63PONmoG/XpfDmYR6rELYtcCryjW+4wFYj2fcixu9+OVPQTHHuogApn8BK1kip1Vo0jno6FZlwHWRKw7D2MkdQaSAMNrsGL0A8jwJoZ6Rpz5/e/mTWCqMR1bYHJ6jmNqxVTxWy2OhJ1/ULMxJL/oXjSoIBF9wDMy5aLaixlJBpOkC3dRKIjTcf2sv9/o+5lgKNgTtrUSqF0KN1TmBjsrxtoee/EpXWXpmpB7zkcid1JdMJTleQuy/CxX80PCtXB4Q05VnOgw214BKCGoX8YM2Xa/kn7plJ0fViqcYx3+A3Byqfd877u85+1T7vYP4jDURMyZZPf+S7LhobI36LzWwY="
+
 
 cache:
   npm: true
