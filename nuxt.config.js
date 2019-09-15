@@ -89,6 +89,6 @@ export default {
     }
   },
   googleAnalytics: {
-    id: process.env.GOOGLE_TRACKING_ID || ''
+    id: 'UA-147953098-1'
   }
 }
