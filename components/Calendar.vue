@@ -1,6 +1,8 @@
 <template>
   <FullCalendar v-if="events.length > 0" defaultView="dayGridMonth" :plugins="calendarPlugins" :events="events" />
-  <Loading v-else/>
+  <div v-else class="height-fix">
+    <Loading />
+  </div>
 </template>
 
 <script>
@@ -44,6 +46,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/node_modules/@fullcalendar/core/main.css";
-@import "~/node_modules/@fullcalendar/daygrid/main.css";
+@import "../node_modules/@fullcalendar/core/main.css";
+@import "../node_modules/@fullcalendar/daygrid/main.css";
+
+  .height-fix {
+    min-height: 80vh;
+  }
 </style>
