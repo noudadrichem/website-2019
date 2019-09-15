@@ -46,7 +46,9 @@ export default {
   plugins: [
     { src: '~/plugins/full-calendar', ssr: false }
   ],
-  modules: [],
+  modules: [
+    '@nuxtjs/google-analytics'
+  ],
   generate: {
     // routes: () => {
     //   return axios.get('http://localhost:3000/content.json') // not working :(
@@ -85,5 +87,8 @@ export default {
         })
       }
     }
+  },
+  googleAnalytics: {
+    id: process.env.GOOGLE_TRACKING_ID || ''
   }
 }
