@@ -43,7 +43,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~/node_modules/@fullcalendar/core/main.css";
 @import "~/node_modules/@fullcalendar/daygrid/main.css";
+
+.fc-toolbar h2 {
+  font-size: 1rem !important;
+}
 </style>

@@ -20,6 +20,12 @@ a {
   color: inherit;
 }
 
+img,
+.image {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 1084px;
   margin: 0 auto;
