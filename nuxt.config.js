@@ -44,7 +44,8 @@ export default {
     '@/assets/scss/main.scss'
   ],
   plugins: [
-    { src: '~/plugins/full-calendar', ssr: false }
+    { src: '~/plugins/full-calendar', ssr: false },
+    { src: '~/plugins/slick', ssr: false },
   ],
   modules: [
     '@nuxtjs/google-analytics'

@@ -1,15 +1,15 @@
 <template>
   <div class="heading">
-    <AnimatedLine :top="0" right="-10px" :interval="2000" />
-    <AnimatedLine right="75px" :bottom="0" :interval="4000" :rotate="90"/>
-    <AnimatedLine right="115px" :bottom="0" :interval="6000" :rotate="90"/>
-    <AnimatedLine :left="0" top="128px" :interval="8000" :rotate="180"/>
+    <AnimatedLine :top="0" right="-10px" :interval="2000" :doHideMobile="true" />
+    <AnimatedLine right="75px" :bottom="0" :interval="4000" :rotate="90" :doHideMobile="true" />
+    <AnimatedLine right="115px" :bottom="0" :interval="6000" :rotate="90" :doHideMobile="true"/>
+    <AnimatedLine :left="0" top="28px" :interval="8000" :rotate="180" :doHideMobile="true" />
 
-    <!-- <AnimatedLine left="20%" bottom="-50px" :interval="4500" :rotate="135" /> -->
-    <!-- <AnimatedLine left="-150px" top="-100px" :interval="6000" :rotate="225" /> -->
+    <AnimatedLine left="-10%" bottom="-8px" :interval="2500" :rotate="180" :doHideMobile="false" />
+    <AnimatedLine left="40vw" top="32px" :interval="3500" :rotate="0" :doHideMobile="false" />
 
     <div class="heading-content">
-      <img src="/logo/indicium-logo-top.svg" alt="Indicium Logo" />
+      <img class="logo" src="/logo/indicium-logo-top.svg" alt="Indicium Logo" />
 
       <h1>Wij zijn de <span class="bold">studie</span>vereniging voor HBO-ICT van Hogeschool Utrecht</h1>
 
@@ -38,10 +38,6 @@ export default {
     AnimatedLine
   },
   methods: {
-    navigateToCalendar() {
-      // eslint-disable-next-line no-restricted-globals
-      setTimeout(() => { location.href = '#events' }, 1)
-    },
     signUp() {
       console.log('kek')
     }
@@ -50,11 +46,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/variables.scss';
+
 .heading {
   display: flex;
   justify-content: center;
   padding: 128px 0 192px;
   position: relative;
+
+  @media screen and (max-width: $bp-tablet-sm) {
+    padding: 40px 12px 56px;
+  }
 
   &-content {
     text-align: center;
@@ -64,6 +66,12 @@ export default {
 
     h1 {
       max-width: 832px;
+    }
+
+    @media screen and (max-width: $bp-tablet-sm) {
+      .logo {
+        margin-bottom: 24px;
+      }
     }
 
     .buttons {

@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="hideMobile"
     class="animated-line"
     :style="{
       top,
@@ -39,9 +40,9 @@
 </template>
 
 <script>
-/** eslint-disable */
+/* eslint-disable */
 export default {
-  props: ['top', 'left', 'right', 'bottom', 'interval', 'rotate'],
+  props: ['top', 'left', 'right', 'bottom', 'interval', 'rotate', 'doHideMobile'],
   data: () => ({
     isTracing: false,
     isPulsing: false
@@ -60,6 +61,21 @@ export default {
       }, PULSE_TIME * 4)
     }
   },
+  computed: {
+    isMobile() {
+      return process.browser
+        ? window.innerWidth < 700
+        : false
+    },
+    hideMobile() {
+      console.log('is and hide mobile', this.isMobile && this.doHideMobile)
+      if(this.isMobile && this.doHideMobile) {
+        return false
+      }
+
+      return true
+    }
+  },
   mounted() {
     console.log('toggle animated line')
     this.tracingInterval = setInterval(this.toggleTrace, this.interval)
@@ -71,6 +87,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/variables.scss';
+
 .animated-line {
   margin: 64px auto 16px;
   width: 386px;

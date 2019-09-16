@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="container">
-      <div>
+      <div class="column">
         <h4>Pagina's</h4>
         <ul class="footer-menu pages">
           <li v-for="(menuItem, idx) in menuItems" :key="idx">
@@ -10,7 +10,7 @@
         </ul>
       </div>
 
-      <div>
+      <div class="column">
         <h4>Contact</h4>
         <ul class="footer-menu contact">
           <li v-for="(value, key) in contactInfo" :key="key">
@@ -67,10 +67,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/variables.scss';
+
 footer {
   background: #DBEFF4;
   padding: 80px;
   color: var(--text-color);
+
+  @media screen and (max-width: $bp-tablet-sm) {
+    padding: 12px;
+  }
 
   .container {
     max-width: 1084px;
@@ -78,6 +84,10 @@ footer {
     padding: 0 24px;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: $bp-tablet-sm) {
+      display: block;
+    }
 
     .footer-menu {
 

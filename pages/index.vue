@@ -53,6 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/variables.scss';
 
 * {
   box-sizing: border-box;
@@ -63,6 +64,9 @@ body {
 
   .text-block, .image-block {
     padding: 80px 0;
+    @media screen and (max-width: $bp-tablet-sm) {
+      padding: 12px 0;
+    }
   }
 }
 </style>
