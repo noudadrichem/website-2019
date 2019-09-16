@@ -48,7 +48,9 @@ export default {
     { src: '~/plugins/slick', ssr: false },
     { src: '~/plugins/busje', ssr: false },
   ],
-  modules: [],
+  modules: [
+    '@nuxtjs/google-analytics'
+  ],
   generate: {
     // routes: () => {
     //   return axios.get('http://localhost:3000/content.json') // not working :(
@@ -88,5 +90,8 @@ export default {
         })
       }
     }
+  },
+  googleAnalytics: {
+    id: 'UA-147953098-1'
   }
 }

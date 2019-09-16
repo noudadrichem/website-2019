@@ -1,6 +1,8 @@
 <template>
   <FullCalendar v-if="events.length > 0" defaultView="dayGridMonth" :plugins="calendarPlugins" :events="events" />
-  <Loading v-else/>
+  <div v-else class="height-fix">
+    <Loading />
+  </div>
 </template>
 
 <script>
