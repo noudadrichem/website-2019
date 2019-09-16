@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="hideMobile"
     class="animated-line"
     :style="{
       top,
@@ -39,9 +40,9 @@
 </template>
 
 <script>
-/** eslint-disable */
+/* eslint-disable */
 export default {
-  props: ['top', 'left', 'right', 'bottom', 'interval', 'rotate'],
+  props: ['top', 'left', 'right', 'bottom', 'interval', 'rotate', 'doHideMobile'],
   data: () => ({
     isTracing: false,
     isPulsing: false
@@ -58,6 +59,20 @@ export default {
         this.$set(this, 'isTracing', false)
         this.$set(this, 'isPulsing', false)
       }, PULSE_TIME * 4)
+    }
+  },
+  computed: {
+    isMobile() {
+      return process.browser
+        ? window.innerWidth < 700
+        : false
+    },
+    hideMobile() {
+      if(this.isMobile && this.doHideMobile) {
+        return false
+      }
+
+      return true
     }
   },
   mounted() {
@@ -79,9 +94,9 @@ export default {
   position: absolute;
   z-index: -1;
 
-  @media screen and (max-width: $bp-tablet-sm) {
-    display: none;
-  }
+  // @media screen and (max-width: $bp-tablet-sm) {
+  //   display: none;
+  // }
 
   .to-trace {
     stroke-dasharray: 500;

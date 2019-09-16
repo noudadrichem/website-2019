@@ -81,7 +81,7 @@ export default {
 
     @media screen and (max-width: $bp-tablet-sm) {
       width: 100%;
-      padding-bottom: 32px;
+      // padding-bottom: 32px;
     }
 
     .slick-prev,
