@@ -1,7 +1,7 @@
 {
   "name": "indiciumwebsite",
   "version": "1.0.0",
-  "description": "SV Indicium Website",
+  "description": "Wij zijn de studievereniging voor HBO-ICT van Hogeschool Utrecht",
   "author": "Noud Adrichem <info@noudadrichem.com>",
   "scripts": {
     "dev": "nuxt",
@@ -14,8 +14,10 @@
     "@fullcalendar/daygrid": "^4.3.0",
     "@fullcalendar/vue": "^4.3.1",
     "axios": "^0.19.0",
+    "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-slick": "^1.1.15"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",

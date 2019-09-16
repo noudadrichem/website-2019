@@ -59,7 +59,7 @@ export default {
   position: relative;
 
   @media screen and (max-width: $bp-tablet-sm) {
-    padding: 80px 94px;
+    padding: 80px 24px;
   }
 
   &-content {
