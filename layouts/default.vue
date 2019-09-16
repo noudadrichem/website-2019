@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NavToggle />
     <Nav />
     <nuxt />
     <Footer />
@@ -7,11 +8,13 @@
 </template>
 
 <script>
+import NavToggle from '../components/NavToggle'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
 export default {
   components: {
+    NavToggle,
     Nav,
     Footer
   }

@@ -17,7 +17,7 @@
     </div>
     <Loading v-else-if="isLoading" />
     <div v-else-if="!isLoading && events.length === 0">
-      <p class="center">Geen toekomstige activiteiten gevonden... 😢</p>
+      <p class="center">Geen opkomende activiteiten gevonden... 😢</p>
     </div>
   </div>
 </template>

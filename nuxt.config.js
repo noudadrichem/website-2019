@@ -46,6 +46,7 @@ export default {
   plugins: [
     { src: '~/plugins/full-calendar', ssr: false },
     { src: '~/plugins/slick', ssr: false },
+    { src: '~/plugins/busje', ssr: false },
   ],
   modules: [
     '@nuxtjs/google-analytics'
@@ -65,6 +66,7 @@ export default {
   },
   build: {
     extend(config, ctx) {
+      ctx.isDev = false
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',

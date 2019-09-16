@@ -45,11 +45,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "../node_modules/@fullcalendar/core/main.css";
-@import "../node_modules/@fullcalendar/daygrid/main.css";
+<style lang="scss">
+@import "~/node_modules/@fullcalendar/core/main.css";
+@import "~/node_modules/@fullcalendar/daygrid/main.css";
 
-  .height-fix {
-    min-height: 80vh;
-  }
+.fc-toolbar h2 {
+  font-size: 1rem !important;
+}
 </style>

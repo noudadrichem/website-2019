@@ -1,7 +1,6 @@
 <template>
   <div
-    v-if="hideMobile"
-    class="animated-line"
+    :class="['animated-line', { 'not-on-mobile': doHideMobile }, { 'not-on-desktop': !doHideMobile }]"
     :style="{
       top,
       left,
@@ -68,12 +67,15 @@ export default {
         : false
     },
     hideMobile() {
-      console.log('is and hide mobile', this.isMobile && this.doHideMobile)
-      if(this.isMobile && this.doHideMobile) {
-        return false
+      console.log('is mobile', this.isMobile)
+      console.log('this.doHideMobile', this.doHideMobile)
+      if(this.doHideMobile) {
+        return true
+      } else if(this.doHideMobile && this.isMobile) {
+        return true
       }
 
-      return true
+      return this.doHideMobile
     }
   },
   mounted() {
@@ -94,6 +96,19 @@ export default {
   width: 386px;
   position: absolute;
   z-index: -1;
+
+  &.not-on-mobile {
+    @media screen and (max-width: $bp-tablet-sm) {
+      display: none;
+    }
+  }
+
+  &.not-on-desktop {
+    display: block;
+    @media screen and (min-width: $bp-tablet-sm) {
+      display: none;
+    }
+  }
 
   .to-trace {
     stroke-dasharray: 500;

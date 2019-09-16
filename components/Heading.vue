@@ -5,8 +5,8 @@
     <AnimatedLine right="115px" :bottom="0" :interval="6000" :rotate="90" :doHideMobile="true"/>
     <AnimatedLine :left="0" top="28px" :interval="8000" :rotate="180" :doHideMobile="true" />
 
-    <AnimatedLine left="-10%" bottom="-8px" :interval="2500" :rotate="180" :doHideMobile="false" />
-    <AnimatedLine left="40vw" top="32px" :interval="3500" :rotate="0" :doHideMobile="false" />
+    <AnimatedLine left="-10%" bottom="28px" :interval="2500" :rotate="180" :doHideMobile="false" />
+    <AnimatedLine left="40vw" top="2px" :interval="3500" :rotate="45" :doHideMobile="false" />
 
     <div class="heading-content">
       <img class="logo" src="/logo/indicium-logo-top.svg" alt="Indicium Logo" />
@@ -14,7 +14,7 @@
       <h1>Wij zijn de <span class="bold">studie</span>vereniging voor HBO-ICT van Hogeschool Utrecht</h1>
 
       <div class="buttons">
-        <Button size="l" :onClick="signUp" url="https://docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform">
+        <Button size="l" url="https://docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform">
           Wordt lid
         </Button>
         <TextLink url="/activiteiten">
@@ -29,6 +29,7 @@
 import Button from '../components/interactions/button'
 import TextLink from '../components/interactions/TextLink'
 import AnimatedLine from '../components/AnimatedLine'
+import NavToggle from '../components/NavToggle'
 
 export default {
   name: 'Heading',
@@ -36,11 +37,6 @@ export default {
     Button,
     TextLink,
     AnimatedLine
-  },
-  methods: {
-    signUp() {
-      console.log('kek')
-    }
   }
 }
 </script>
@@ -53,10 +49,8 @@ export default {
   justify-content: center;
   padding: 128px 0 192px;
   position: relative;
-
-  @media screen and (max-width: $bp-tablet-sm) {
-    padding: 40px 12px 56px;
-  }
+  max-width: 100vw;
+  overflow: hidden;
 
   &-content {
     text-align: center;
