@@ -79,6 +79,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/variables.scss';
+
 .text-block {
   margin: 0 auto 32px;
 
@@ -88,8 +90,9 @@ export default {
 
   &.text-center {
     text-align: center;
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: $bp-tablet-sm) {
       margin: 0 16px;
+      text-align: left;
     }
   }
 

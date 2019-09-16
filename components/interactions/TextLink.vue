@@ -20,16 +20,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../../assets/scss/variables.scss';
+
   .text-link {
     font-weight: 500;
     font-family: Roboto, serif;
-    font-size: 24px;
+    font-size: 1.2rem;
     line-height: 140%;
     letter-spacing: 1.5px ;
     color: #72C9E0;
     cursor: pointer;
     display: inline-block;
     position: relative;
+
+    @media screen and (max-width: $bp-tablet-sm) {
+      font-size: 1rem;
+    }
 
     &:after {
       position: absolute;

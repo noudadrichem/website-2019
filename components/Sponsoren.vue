@@ -42,6 +42,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/scss/variables.scss';
+
 .sponsoren {
   padding: 8px 0 32px;
   background: #fff;
@@ -58,10 +60,21 @@ export default {
     overflow: auto;
     justify-content: space-between;
 
+    @media screen and (max-width: $bp-tablet-sm) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
     li  {
       max-width: 108px;
       display: inline-flex;
       align-items: center;
+
+      @media screen and (max-width: $bp-tablet-sm) {
+        max-width: none;
+        // flex-basis: 100%;
+        flex: 1;
+      }
 
       &:hover {
         img {

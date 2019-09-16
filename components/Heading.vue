@@ -50,11 +50,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/variables.scss';
+
 .heading {
   display: flex;
   justify-content: center;
   padding: 128px 0 192px;
   position: relative;
+
+  @media screen and (max-width: $bp-tablet-sm) {
+    padding: 80px 94px;
+  }
 
   &-content {
     text-align: center;

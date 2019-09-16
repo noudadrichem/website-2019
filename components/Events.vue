@@ -87,6 +87,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/scss/variables.scss';
+
 .events-container {
   max-width: 1084px;
   margin: 0 auto;
@@ -101,6 +103,10 @@ export default {
         display: inline-flex;
         align-items: center;
         padding: 16px;
+
+        @media screen and (max-width: $bp-tablet-sm) {
+          padding: 8px;
+        }
 
         span {
           display: inline-flex;

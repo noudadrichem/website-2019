@@ -71,11 +71,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/variables.scss';
+
 .animated-line {
   margin: 64px auto 16px;
   width: 386px;
   position: absolute;
   z-index: -1;
+
+  @media screen and (max-width: $bp-tablet-sm) {
+    display: none;
+  }
 
   .to-trace {
     stroke-dasharray: 500;

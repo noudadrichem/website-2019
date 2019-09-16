@@ -53,10 +53,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/variables.scss';
+
 .nav {
   opacity: 0.8;
   background: #fff;
   box-shadow: inset 0 -2px 0 0 #cecfcf;
+
+  @media screen and (max-width: $bp-tablet-sm) {
+    display: none;
+  }
 
   .logo {
     img {
