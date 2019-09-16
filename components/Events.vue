@@ -17,7 +17,7 @@
     </div>
     <Loading v-else-if="isLoading" />
     <div v-else-if="!isLoading && events.length === 0">
-      <p class="center">Geen toekomstige activiteiten gevonden.</p>
+      <p class="center">Geen toekomstige activiteiten gevonden... 😢</p>
     </div>
   </div>
 </template>
@@ -91,7 +91,7 @@ export default {
 
 .events-container {
   max-width: 1084px;
-  margin: 0 auto;
+  margin: 40px auto;
 
   .categories {
     ul {

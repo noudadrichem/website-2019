@@ -68,6 +68,7 @@ export default {
         : false
     },
     hideMobile() {
+      console.log('is and hide mobile', this.isMobile && this.doHideMobile)
       if(this.isMobile && this.doHideMobile) {
         return false
       }
@@ -93,10 +94,6 @@ export default {
   width: 386px;
   position: absolute;
   z-index: -1;
-
-  // @media screen and (max-width: $bp-tablet-sm) {
-  //   display: none;
-  // }
 
   .to-trace {
     stroke-dasharray: 500;
