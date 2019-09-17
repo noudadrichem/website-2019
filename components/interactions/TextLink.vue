@@ -1,5 +1,5 @@
 <template>
-  <a v-if="url.startsWith('http')" href="text-link">
+  <a v-if="url.startsWith('http')" :href="url" class="text-link">
     <slot></slot>
   </a>
   <n-link v-else :to="url" class="text-link">
