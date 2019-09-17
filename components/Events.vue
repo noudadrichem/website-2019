@@ -60,27 +60,30 @@ export default {
     ]
   }),
   mounted() {
-    axios.get('https://indicium.hu/json/events?page%5Bsize%5D=1000')
-      .then((response) => {
-        const events = response.data.data
-        const today = new Date().getTime()
-        const featureEvents = events
-          .filter(evt => new Date(evt.attributes.start).getTime() > today)
-          .map(evt => ({
-            title: evt.attributes.title,
-            description: this.stripHTMLFromString(evt.attributes.contentblocks[0].content),
-            date: new Date(evt.attributes.start).getTime() / 1000,
-            url: `evenement/${evt.attributes.slug}`,
-            categories: evt.attributes.categories
-          }))
-
-        this.$set(this, 'isLoading', false)
-        this.$set(this, 'events', featureEvents)
-      })
+    this.fetchEvents()
   },
   methods: {
     stripHTMLFromString(str = '') {
       return str.replace(/(<([^>]+)>)/ig, '').replace(/\n|\r/g, '')
+    },
+    fetchEvents() {
+      axios.get('https://indicium.hu/json/events?page%5Bsize%5D=1000')
+        .then((response) => {
+          const events = response.data.data
+          const today = new Date().getTime()
+          const featureEvents = events
+            .filter(evt => new Date(evt.attributes.start).getTime() > today)
+            .map(evt => ({
+              title: evt.attributes.title,
+              description: this.stripHTMLFromString(evt.attributes.contentblocks[0].content),
+              date: new Date(evt.attributes.start).getTime() / 1000,
+              url: `evenement/${evt.attributes.slug}`,
+              categories: evt.attributes.categories
+            }))
+
+          this.$set(this, 'isLoading', false)
+          this.$set(this, 'events', featureEvents)
+        })
     }
   }
 }

@@ -5,7 +5,7 @@
     </div>
     <h5>{{ toDateString }}</h5>
     <h4>{{ event.title }}</h4>
-    <p class="small">{{ event.description }}</p>
+    <p class="small">{{ event.description.slice(0, 140) }}</p>
   </a>
 </template>
 
@@ -32,9 +32,11 @@ export default {
     },
     getCategoryColors() {
       return this.allCategories.reduce((activeCategories, category) => {
-        const categories = this.event.categories.map(c => c)
-        if (categories.includes(category.courseTitle)) {
-          activeCategories.push(category)
+        if(this.event.categories !== '') {
+          const categories = this.event.categories.map(c => c)
+          if (categories.includes(category.courseTitle)) {
+            activeCategories.push(category)
+          }
         }
 
         return activeCategories
@@ -42,7 +44,7 @@ export default {
     }
   },
   methods: {
-    getMonthAsString() {
+    getMonthAsString(currentMonth) {
       const monthList = [
         'Januari',
         'Februari',
@@ -57,7 +59,6 @@ export default {
         'November',
         'December'
       ]
-      const currentMonth = new Date().getMonth()
 
       return monthList[currentMonth]
     }
