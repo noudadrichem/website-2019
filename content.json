@@ -14,10 +14,6 @@
           "imgUrl": "https://via.placeholder.com/1000x400/f2f2f2"
         },
         {
-          "title": "Commissies",
-          "type": "text-left"
-        },
-        {
           "subTitle": "Het bestuur",
           "description": "In bestuursjaar 2018-2019 hebben we een vierkoppig bestuur. Na hard werken aan het begin van het jaar is er een bestuur gevormd, dat natuurlijk uit alleen maar HBO-ICT-studenten bestaat.",
           "type": "text-left",
@@ -27,25 +23,45 @@
           }
         },
         {
-          "subTitle": "Activiteitencommissie",
-          "description": "descripiton",
-          "type": "text-left"
+          "title": "Commissies",
+          "type": "text-left",
+          "description": "De verschillende activiteiten en acties worden geregeld door commissies. Wij houden van commissieleden, zo worden die uitgenodigd op exclusieve borrels, leuke uitjes en andere leuke voordelen!"
         },
         {
-          "title": "Devcommissie",
-          "description": "descripiton",
-          "type": "image-left",
-          "imgUrl": "https://via.placeholder.com/300/f2f2f2"
+          "subTitle": "Activiteitencommissie",
+          "description": "De activiteitencommissie houd zich bezig met het organiseren van activiteiten van de vereniging. Ze organiseren bijvoorbeeld dingen zoals borrels, feestjes, reizen of andere niet-educatieve activiteiten zoals karten of bowlen!",
+          "type": "text-left",
+          "button": {
+            "text": "Meld je aan!",
+            "url": "https://forms.gle/eHKe6KNVtnEUMNeDA"
+          }
+        },
+        {
+          "subTitle": "Devcommissie",
+          "description": "De studievereniging heeft verschillende software in beheer om het werk makkelijker te maken, denk hierbij aan de ledenadministratie, een vacaturebank of de website. Bij de devcommissie ga je proberen je programmeerskills naar de next level proberen te brengen door adviezen van meerderejaars en interessante technieken.",
+          "type": "text-left",
+          "button": {
+            "text": "Meld je aan!",
+            "url": "https://forms.gle/h2kw4gUAwwu8gb3p6"
+          }
         },
         {
           "subTitle": "Educatiecommissie",
-          "description": "descripiton",
-          "type": "text-left"
+          "description": "De educatiecommissie is verantwoordelijk voor alle gastcolleges, bedrijfsbezoeken, lunchlezingen en andere educatieve activiteiten. Wil jij college krijgen over onderwerpen die school niet helemaal aanbied (zoals bijvoorbeeldquantum computing, security), of wil jij weten hoe bedrijven dingen aanpakken? Kom eens kijken bij de devocommissie!",
+          "type": "text-left",
+          "button": {
+            "text": "Meld je aan!",
+            "url": "https://forms.gle/LS4iwMA1mkDH87Hu7"
+          }
         },
         {
-          "subTitle": "Introcommisie",
-          "description": "descripiton",
-          "type": "text-left"
+          "subTitle": "Introcommissie",
+          "description": "Het begin van elk schooljaar organiseert Indicium een introkamp voor de nieuwe eerstejaars. Hier moeten de nodige voorbereidingen voor worden getroffen, zoals contact met sponsoren, activiteiten regelen en andere zaken. Lijkt het jou leuk om een supertof kamp op poten te zetten? Meld je dan aan! Het kamp wordt meestal gehouden in een van de laatste twee weken van de zomervakantie.",
+          "type": "text-left",
+          "button": {
+            "text": "Meld je aan!",
+            "url": "https://forms.gle/uJN2XJogRLcsT3zVA"
+          }
         }
       ]
     },
