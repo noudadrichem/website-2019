@@ -11,6 +11,7 @@
           :text="contentObj.description"
           :button="contentObj.button"
           :card="contentObj.card"
+          :textLink="contentObj.textLink"
         />
       </div>
 

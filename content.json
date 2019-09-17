@@ -62,7 +62,7 @@
           "description": "Het begin van elk schooljaar organiseert Indicium een introkamp voor de nieuwe eerstejaars. Hier moeten de nodige voorbereidingen voor worden getroffen, zoals contact met sponsoren, activiteiten regelen en andere zaken. Lijkt het jou leuk om een supertof kamp op poten te zetten? Meld je dan aan! Het kamp wordt meestal gehouden in een van de laatste twee weken van de zomervakantie.",
           "type": "text-left",
           "card": true,
-          "button": {
+          "textLink": {
             "text": "Meld je aan!",
             "url": "https://forms.gle/uJN2XJogRLcsT3zVA"
           }

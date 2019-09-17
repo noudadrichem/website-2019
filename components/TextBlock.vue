@@ -11,6 +11,10 @@
     <Button v-if="button" size="l" :center="type === 'center'" :url="button.url">
       {{ button.text }}
     </Button>
+
+    <TextLink v-if="textLink" :url="textLink.url">
+      {{ textLink.text }}
+    </TextLink>
   </div>
 
   <div v-else-if="type === 'text-left'" :class="['text-block', type, { contained }, { card }]">
@@ -25,6 +29,10 @@
     <Button v-if="button" size="l" :center="type === 'center'" :url="button.url">
       {{ button.text }}
     </Button>
+
+    <TextLink v-if="textLink" :url="textLink.url">
+      {{ textLink.text }}
+    </TextLink>
   </div>
 
   <div v-else-if="type === 'text-right'" :class="['text-block', type, { contained }, { card }]">
@@ -39,6 +47,10 @@
     <Button v-if="button" size="l" :center="type === 'center'" :url="button.url">
       {{ button.text }}
     </Button>
+
+    <TextLink v-if="textLink" :url="textLink.url">
+      {{ textLink.text }}
+    </TextLink>
   </div>
 
   <div v-else class="text-block">
@@ -53,16 +65,21 @@
     <Button v-if="button" size="l" :url="button.url">
       {{ button.text }}
     </Button>
+
+    <TextLink v-if="textLink" :url="textLink.url">
+      {{ textLink.text }}
+    </TextLink>
   </div>
 </template>
 
 <script>
 /* eslint-disable */
 import Button from './interactions/button'
+import TextLink from './interactions/TextLink'
 
 export default {
   name: 'TextBlock',
-  components: { Button },
+  components: { TextLink, Button },
   props: {
     contained: {
       type: Boolean,
@@ -87,6 +104,10 @@ export default {
       default: ''
     },
     button: {
+      type: Object,
+      default: null
+    },
+    textLink: {
       type: Object,
       default: null
     },
