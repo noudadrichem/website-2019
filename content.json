@@ -32,7 +32,7 @@
           "description": "De activiteitencommissie houd zich bezig met het organiseren van activiteiten van de vereniging. Ze organiseren bijvoorbeeld dingen zoals borrels, feestjes, reizen of andere niet-educatieve activiteiten zoals karten of bowlen!",
           "type": "text-left",
           "card": true,
-          "button": {
+          "textLink": {
             "text": "Meld je aan!",
             "url": "https://forms.gle/eHKe6KNVtnEUMNeDA"
           }
@@ -42,7 +42,7 @@
           "description": "De studievereniging heeft verschillende software in beheer om het werk makkelijker te maken, denk hierbij aan de ledenadministratie, een vacaturebank of de website. Bij de devcommissie ga je proberen je programmeerskills naar de next level proberen te brengen door adviezen van meerderejaars en interessante technieken.",
           "type": "text-left",
           "card": true,
-          "button": {
+          "textLink": {
             "text": "Meld je aan!",
             "url": "https://forms.gle/h2kw4gUAwwu8gb3p6"
           }
@@ -52,7 +52,7 @@
           "description": "De educatiecommissie is verantwoordelijk voor alle gastcolleges, bedrijfsbezoeken, lunchlezingen en andere educatieve activiteiten. Wil jij college krijgen over onderwerpen die school niet helemaal aanbied (zoals bijvoorbeeldquantum computing, security), of wil jij weten hoe bedrijven dingen aanpakken? Kom eens kijken bij de devocommissie!",
           "type": "text-left",
           "card": true,
-          "button": {
+          "textLink": {
             "text": "Meld je aan!",
             "url": "https://forms.gle/LS4iwMA1mkDH87Hu7"
           }
