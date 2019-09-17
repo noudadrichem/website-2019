@@ -10,6 +10,7 @@
           :subTitle="contentObj.subTitle"
           :text="contentObj.description"
           :button="contentObj.button"
+          :card="contentObj.card"
         />
       </div>
 

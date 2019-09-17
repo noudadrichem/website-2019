@@ -1,7 +1,11 @@
 <template>
-  <div v-if="type === 'text-center'" :class="['text-block', type, { contained }]">
-    <h1 v-if="title">{{ title }}</h1>
-    <h4 v-if="subTitle">{{ subTitle }}</h4>
+  <div v-if="type === 'text-center'" :class="['text-block', type, { contained }, { card }]">
+    <h1 v-if="title">
+      {{ title }}
+    </h1>
+    <h4 v-if="subTitle">
+      {{ subTitle }}
+    </h4>
     <p v-if="text" v-html="text"></p>
 
     <Button v-if="button" size="l" :center="type === 'center'" :url="button.url">
@@ -9,9 +13,13 @@
     </Button>
   </div>
 
-  <div v-else-if="type === 'text-left'" :class="['text-block', type, { contained }]">
-    <h1 v-if="title">{{ title }}</h1>
-    <h4 v-if="subTitle">{{ subTitle }}</h4>
+  <div v-else-if="type === 'text-left'" :class="['text-block', type, { contained }, { card }]">
+    <h1 v-if="title">
+      {{ title }}
+    </h1>
+    <h4 v-if="subTitle">
+      {{ subTitle }}
+    </h4>
     <p v-if="text" v-html="text"></p>
 
     <Button v-if="button" size="l" :center="type === 'center'" :url="button.url">
@@ -19,9 +27,13 @@
     </Button>
   </div>
 
-  <div v-else-if="type === 'text-right'" :class="['text-block', type, { contained }]">
-    <h1 v-if="title">{{ title }}</h1>
-    <h4 v-if="subTitle">{{ subTitle }}</h4>
+  <div v-else-if="type === 'text-right'" :class="['text-block', type, { contained }, { card }]">
+    <h1 v-if="title">
+      {{ title }}
+    </h1>
+    <h4 v-if="subTitle">
+      {{ subTitle }}
+    </h4>
     <p v-if="text" v-html="text"></p>
 
     <Button v-if="button" size="l" :center="type === 'center'" :url="button.url">
@@ -30,8 +42,12 @@
   </div>
 
   <div v-else class="text-block">
-    <h1 v-if="title">{{ title }}</h1>
-    <h4 v-if="subTitle">{{ subTitle }}</h4>
+    <h1 v-if="title">
+      {{ title }}
+    </h1>
+    <h4 v-if="subTitle">
+      {{ subTitle }}
+    </h4>
     <p v-if="text" v-html="text"></p>
 
     <Button v-if="button" size="l" :url="button.url">
@@ -73,6 +89,10 @@ export default {
     button: {
       type: Object,
       default: null
+    },
+    card: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -98,6 +118,20 @@ export default {
 
   &.text-right {
     text-align: right;
+  }
+
+  &.card {
+    @media screen and (max-width: $bp-tablet-sm) {
+      padding: 32px;
+    }
+    padding: 48px;
+    max-width: 928px;
+    box-shadow: 0 0 20px 0 rgba(124, 124, 124, 0.1);
+    transition: box-shadow 300ms;
+
+    &:hover {
+      box-shadow: 0 0 20px 0 rgba(124, 124, 124, 0.3);
+    }
   }
 }
 </style>
