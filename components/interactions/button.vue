@@ -30,7 +30,6 @@ export default {
 
 <style lang="scss" scoped>
   .btn {
-    font-family: Roboto, sans-serif;
     color: #fff;
     background: #72c9e0;
     box-shadow: 0 0 32px rgba(181, 187, 201, 0.4);
