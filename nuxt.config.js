@@ -28,10 +28,36 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicons/favicon.ico'
-    }, {
+    },
+    {
+      rel: 'apple-touch-icon',
+      type: 'image/x-icon',
+      href: '/favicons/apple-touch-icon.png'
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicons/favicon-32x32.png'
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon-16x16.png'
+    },
+    {
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicons/favicon.ico'
+    },
+    {
+      rel: 'manifest',
+      href: '/favicons/site.webmanifest'
+    },
+    {
       rel: 'stylesheet',
       href: 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.css'
-    }, {
+    },
+    {
       rel: 'stylesheet',
       href: 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.css'
     }]

@@ -24,7 +24,6 @@ export default {
 
   .text-link {
     font-weight: 500;
-    font-family: Roboto, serif;
     font-size: 1.2rem;
     line-height: 140%;
     letter-spacing: 1.5px ;
