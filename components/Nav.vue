@@ -9,14 +9,14 @@
     </div>
 
     <div class="container flex">
-      <div v-if="!isHome && !isMobile" class="logo">
+      <div v-show="!isHome && !isMobile" class="logo">
         <n-link to="/">
           <img src="/logo/indicium-logo-left.svg" alt="Indicium Logo" />
         </n-link>
       </div>
 
       <ul :style="{ margin: isHome ? '0 auto' : '0'}">
-        <li v-if="isMobile">
+        <li v-show="isMobile">
           <n-link to="/" @click.native="hideNav" prefetch>Home</n-link>
         </li>
         <li v-for="item in items" :key="item.title + item.url">
@@ -126,7 +126,6 @@ export default {
 
   // mobile nav
   @media screen and (max-width: $bp-tablet-sm) {
-    display: block;
     opacity: 1;
     position: fixed;
     top: 0;

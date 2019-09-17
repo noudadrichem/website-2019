@@ -6,7 +6,6 @@
     >
       <img v-for="(s, idx) in sponsoren" :src="s.path" alt="sponsor logo title" :key="idx" />
     </slick>
-
   </div>
 </template>
 
