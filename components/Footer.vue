@@ -34,7 +34,7 @@ export default {
     menuItems: [
       {
         title: 'Inschrijven',
-        link: '#'
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform'
       },
       {
         title: 'Vacatures',
@@ -42,11 +42,11 @@ export default {
       },
       {
         title: 'Statuten',
-        link: '#'
+        link: '/statuten'
       },
       {
         title: 'Over',
-        link: '#'
+        link: '/over-indicium'
       },
       {
         title: 'Uitleenservice',
@@ -54,11 +54,11 @@ export default {
       },
       {
         title: 'Activiteiten',
-        link: '#'
+        link: '/activiteiten'
       },
       {
         title: 'Sponsoren en partners',
-        link: '#'
+        link: '/partners'
       },
     ]
   })
