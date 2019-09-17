@@ -66,6 +66,10 @@
             "text": "Meld je aan!",
             "url": "https://forms.gle/uJN2XJogRLcsT3zVA"
           }
+        },
+        {
+          "description": "Heb je wel interesse om iets te doen, maar weet je niet of het iets voor je is? Stuur dan een mailtje naar <a href=\"mailto:joostlekkerkerker@indicium.hu\">joostlekkerkerker@indicium.hu</a>!",
+          "type": "text-left"
         }
       ]
     },
