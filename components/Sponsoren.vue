@@ -16,12 +16,17 @@ export default {
   name: 'Sponsoren',
   data: () => ({
     slickOptions: {
+      initialSlide: 3,
       slidesToShow: 7,
       variableWidth: true,
       slidesToScroll: 1,
-       responsive: [{
+      centerMode: true,
+
+      responsive: [{
         breakpoint: 1100,
         settings: {
+          centerMode: false,
+          initialSlide: 0,
           slidesToShow: 2,
           autoplay: true,
           prevArrow: false,
@@ -74,18 +79,17 @@ export default {
   }
 
   .slick-slider {
-    width: 90%;
+    // width: 90%;
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
 
     @media screen and (max-width: $bp-tablet-sm) {
       width: 100%;
-      // padding-bottom: 32px;
     }
 
-    .slick-prev,
     .slick-arrow {
+      display: none;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -110,48 +114,6 @@ export default {
         justify-content: center;
       }
     }
-
-  //  @media screen and (max-width: $bp-tablet-sm) {
-  //     width: 100vw;
-  //
   }
-
-  // // ul {
-  // //   max-width: 1280px;
-  // //   margin: 0 auto;
-  // //   display: flex;
-  // //   overflow: auto;
-  // //   justify-content: space-between;
-
-  //   .slick-slide  {
-  //     width: 100px;
-  //     // max-width: 108px;
-  //     // display: inline-flex;
-  //     // align-items: center;
-  //     box-sizing: border-box;
-
-
-  //     // @media screen and (max-width: $bp-tablet-sm) {
-  //     //   max-width: none;
-  //     //   // flex-basis: 100%;
-  //     //   // flex: 1;
-  //     //   display: block;
-  //     //   width: 100px;
-  //     // }
-
-  //     &:hover {
-  //       img {
-  //         filter: grayscale(0%);
-  //       }
-  //     }
-
-  //     img {
-  //       max-width: 100%;
-  //       filter: grayscale(100%);
-  //       transition: all 200ms;
-  //     }
-
-  //   }
-  // }
 }
 </style>
