@@ -49,6 +49,11 @@ export default {
     const pageData = content.pages.find(p => p.slug === this.$route.params.page)
     this.$set(this, 'page', pageData)
     console.log({ pageData })
+  },
+  head() {
+    return {
+      title: this.page !== undefined ? (this.page.title !== undefined ? this.page.title : 'Indicium') : 'Indicium'
+    }
   }
 }
 </script>
