@@ -14,7 +14,12 @@ export default {
   },
   data: () => ({
 
-  })
+  }),
+  head() {
+    return {
+      title: 'Activiteiten'
+    }
+  }
 }
 </script>
 

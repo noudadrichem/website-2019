@@ -48,6 +48,11 @@ export default {
     TextBlock,
     ImageBlock,
     Events
+  },
+  head() {
+    return {
+      title: 'Indicium'
+    }
   }
 }
 </script>
