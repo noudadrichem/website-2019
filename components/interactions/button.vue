@@ -1,8 +1,8 @@
 <template>
-  <a v-if="url.startsWith('http')" :href="url" :class="['btn', size, center ? 'center' : '']" @click="onClick">
+  <a v-if="url.startsWith('http')" :href="url" :class="['btn', size, center ? 'center' : '']">
     <slot></slot>
   </a>
-  <n-link v-else :to="url" :class="['btn', size, center ? 'center' : '']" @click="onClick">
+  <n-link v-else :to="url" :class="['btn', size, center ? 'center' : '']">
     <slot></slot>
   </n-link>
 </template>
@@ -11,10 +11,6 @@
 export default {
   name: 'Button',
   props: {
-    onClick: {
-      type: Function,
-      required: false,
-    },
     size: {
       type: String,
       required: false,
