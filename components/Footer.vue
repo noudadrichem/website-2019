@@ -8,6 +8,10 @@
             <a :href="menuItem.link">{{ menuItem.title }}</a>
           </li>
         </ul>
+        <div class="contrast-toggle">
+          <input type="checkbox" @change="changeContrast"/>
+          <label id="contrast-toggle" for="contrast-toggle">Hoger contrast</label>
+        </div>
       </div>
 
       <div class="column">
@@ -24,6 +28,12 @@
 
 <script>
 export default {
+  methods: {
+    changeContrast(e) {
+      const isChecked = e.target.checked
+      document.documentElement.style.setProperty('--text-color', isChecked ? '#000' : '#8d8f91')
+    }
+  },
   data: () => ({
     contactInfo: {
       address: 'Heidelberglaan 15',
