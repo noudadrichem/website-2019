@@ -47,5 +47,9 @@ export default {
       left: -5px;
       bottom: 0;
     }
+
+    &:hover {
+      color: #97cfc7;
+    }
   }
 </style>
