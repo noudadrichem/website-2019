@@ -2,7 +2,9 @@
   <div class="activiteiten">
     <div class="container">
       <h1>Activiteiten</h1>
-      <full-calendar />
+      <no-ssr>
+        <full-calendar />
+      </no-ssr>
     </div>
   </div>
 </template>

@@ -2,7 +2,9 @@
   <div>
     <Heading />
 
-    <Sponsoren />
+    <no-ssr>
+      <Sponsoren />
+    </no-ssr>
 
     <TextBlock
       type="text-center"
