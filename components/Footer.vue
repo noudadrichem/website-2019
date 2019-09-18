@@ -18,7 +18,12 @@
         <h4>Contact</h4>
         <ul class="footer-menu contact">
           <li v-for="(value, key) in contactInfo" :key="key">
-            {{ value }}
+            <a v-if="key === 'email'" :href="'mailto:' + value">
+              {{ value }}
+            </a>
+            <span v-else>
+              {{ value }}
+            </span>
           </li>
         </ul>
       </div>
