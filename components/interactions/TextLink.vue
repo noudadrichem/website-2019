@@ -40,11 +40,11 @@ export default {
       position: absolute;
       display: block;
       height: 2px;
-      width: 105%;
+      width: 101%;
       border-radius: 1px;
       background-color: #DBEFF4;
       content: '';
-      left: -5px;
+      left: -1px;
       bottom: 0;
     }
 
