@@ -74,13 +74,13 @@
       "title": "Partners",
       "content": [
         {
-          "title": "BPM Company",
-          "description": "Een specialist in digitalisering van organisaties. Technologische veranderingen volgen elkaar steeds sneller op, organisaties moeten op deze ontwikkelingen inspelen en er in mee gaan. Het is onze missie om onze klanten digitaal toekomst vast te maken. Bij BPM Company staat kwaliteit voorop, we willen niet de grootste zijn maar wel de beste in wat we doen. Daarom is het belangrijk dat onze mensen werkzaamheden doen die ze leuk vinden zodat ze het met passie doen. Het mes snijdt aan twee kanten. Werkzaamheden die je leuk vindt daar ben je meestal ook goed in. En als je goede software bouwt dan leidt dit tot tevreden klanten en lange termijn relaties met klanten. BPM Company is in 2011 gestart omdat we het gevoel hadden dat het bouwen van software beter kan.Daarom zijn we gaan werken met model gedreven software platformen van Pegasystems en Mendix.Onze professionals werken met heel veel plezier en passie met deze platformen.En deze gedrevenheid werd beloond.Al na 4 jaar wonnen we een Computable award voor het beste ICT project in het MKB segment.Jaar na jaar horen we bij de snel groeiende bedrijven van Nederland.We zijn hier trots op en hopen dit nog jaren te blijven doen.",
-          "imgUrl": "http://indicium.hu/thumbs/200x200r/2019-04/bpm-company-logo-300dpi.jpg",
+          "title": "MoneyMonk",
+          "description": "Onze missie\nWij helpen ondernemers succesvol ondernemen\nHoe we dat doen?\nWe vereenvoudigen processen, geven je inzichten over jouw financiën en delen onze kennis met je.\n\nDat resulteert in...\nSlimme en eenvoudige administratie software voor dienstverlenende ondernemers.",
+          "imgUrl": "/partners/moneymonk-logo.png",
           "type": "image-left",
           "button": {
             "text": "Bezoek website",
-            "url": "https://careersbpmcompany.eu"
+            "url": "https://www.moneymonk.nl/"
           }
         },
         {
@@ -90,7 +90,37 @@
           "type": "image-right",
           "button": {
             "text": "Bezoek website",
-            "url": "https://careersbpmcompany.eu"
+            "url": "https://www.axians.nl/integrated-solutions/"
+          }
+        },
+        {
+          "title": "Snow B.V.",
+          "description": "Snow B.V. is een IT-consultancybedrijf dat gespecialiseerd is in Linux en opensource-tools. We werken onder andere voor Nederlandse top-200-bedrijven en bieden hooggekwalificeerde ondersteuning bij het beheer van hun IT-infrastructuur en bedrijfsapplicaties. Onze 110 consultants zijn specialisten op de kennisgebieden system management & integration, architecture, networking, security, cloud, containers en automation. Professionele en persoonlijke ontwikkeling, een veilige werkomgeving en duurzame inzetbaarheid staan bij ons centraal! Wekelijks zijn er bijvoorbeeld trainingen, workshops en meetups over zowel technische vaardigheden (denk aan: Red Hat System Administration en Linux Performance Tuning) als professionele vaardigheden (denk aan: Adviseren als Expert en Krachtig Presenteren). Nergens anders bouw je je cv zo goed op als bij Snow.",
+          "imgUrl": "/partners/snow-logo.svg",
+          "type": "image-left",
+          "button": {
+            "text": "Bezoek website",
+            "url": "https://snow.nl/"
+          }
+        },
+        {
+          "title": "Cegeka",
+          "description": "Onze missie\nWij zijn een familiebedrijf dat IT-oplossingen levert op basis van vakmanschap. We staan dicht bij onze klanten.\n\nWij helpen organisaties om een efficiënte en gepersonaliseerde ervaring te creëren voor hun klanten, consumenten en burgers.\n\nOnze ambitie is om uit te groeien tot de Europese orchestrator op het gebied van digitale bedrijfsplatformen en ecosystemen in onze focusmarkten.",
+          "imgUrl": "/partners/logo_cegeka.png",
+          "type": "image-right",
+          "button": {
+            "text": "Bezoek website",
+            "url": "https://www.cegeka.com/nl-nl/"
+          }
+        },
+        {
+          "title": "Axians Business Analytics",
+          "description": "Wij helpen organisaties waarde te halen uit data. Wij leveren datagedreven maatwerk waardoor klanten op basis van informatie hun business uitdagingen kunnen oplossen. Dit doen wij door data uit diverse bronnen te ontsluiten naar een dataplatform en daaruit informatie te tonen in rapportages en dashboards. Het gaat dan zowel om informatie uit het verleden als voorspellingen voor de toekomst o.b.v. Artificial Intelligence. Naast het uitvoeren van projecten (consultancy), verzorgen we ook trainingen, beheren wij de omgevingen en leveren wij de licenties voor analytics software van IBM en Microsoft.",
+          "imgUrl": "/partners/axians-logo.png",
+          "type": "image-left",
+          "button": {
+            "text": "Bezoek website",
+            "url": "https://www.axians.nl/"
           }
         }
       ]
