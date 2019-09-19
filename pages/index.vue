@@ -20,8 +20,11 @@
       title="Lid zijn is meedoen!"
       text="Een hoop activiteiten organiseren we voor iedereen. Maar als lid krijg je natuurlijk veel meer voordelen! Je krijgt dan korting bij activiteiten, wordt ook uitgenodigd voor activiteiten die exclusief voor leden zijn, kan reageren op vacatures voor onder andere stages en kun je meebouwen aan de vereniging. "
       readMoreButtonText="Word lid"
-      url="https://docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform"
       :contained="true"
+      :button="{
+            text: 'Direct Inschrijven',
+            url: 'https://docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform'
+      }"
     />
 
     <ImageBlock
