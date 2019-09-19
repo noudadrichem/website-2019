@@ -6,7 +6,7 @@
     <div class="text">
       <h1>{{ title }}</h1>
       <p>{{ text }}</p>
-      <Button v-if="button" size="l" :url="url">
+      <Button v-if="button" size="l" :url="button.url">
         {{ button.text }}
       </Button>
     </div>
@@ -17,7 +17,7 @@
       <h1>{{ title }}</h1>
       <p>{{ text }}</p>
 
-      <Button v-if="button" size="l" :url="url">
+      <Button v-if="button" size="l" :url="button.url">
         {{ button.text }}
       </Button>
     </div>

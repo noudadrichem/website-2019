@@ -9,8 +9,8 @@
           </li>
         </ul>
         <div class="contrast-toggle">
-          <input type="checkbox" @change="changeContrast"/>
-          <label id="contrast-toggle" for="contrast-toggle">Hoger contrast</label>
+          <input id="contrast-toggle" type="checkbox" @change="changeContrast"/>
+          <label for="contrast-toggle">Hoger contrast</label>
         </div>
       </div>
 
