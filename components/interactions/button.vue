@@ -36,6 +36,7 @@ export default {
     border-radius: 4px;
     border: 0;
     transition: 200ms;
+    display: inline-flex;
 
     &.s {
       padding: 8px;

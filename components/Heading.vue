@@ -60,6 +60,7 @@ export default {
 
     h1 {
       max-width: 832px;
+      margin-bottom: 24px;
     }
 
     @media screen and (max-width: $bp-tablet-sm) {

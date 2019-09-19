@@ -4,6 +4,7 @@ h1 {
   line-height: 140%;
   font-style: normal;
   color: var(--text-color);
+  margin-bottom: 0;
 
   @media screen and (max-width: $bp-tablet-md) {
     font-size: 44px;

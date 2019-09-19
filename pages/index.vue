@@ -22,8 +22,8 @@
       readMoreButtonText="Word lid"
       :contained="true"
       :button="{
-            text: 'Direct Inschrijven',
-            url: 'https://docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform'
+        text: 'Direct Inschrijven',
+        url: 'https://docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform'
       }"
     />
 
@@ -32,8 +32,11 @@
       title="Commissie of bestuur?"
       text="Lijkt het je leuk om je een jaar lang naast je studie keihard in te zetten voor de vereniging? We zijn op zoek naar een nieuw bestuur! Als bestuur ben je het gezicht van de vereniging en bepaal je welke kant de vereniging opgaat het komende collegejaar. Tijdens een bestuursjaar leer je een hoop en ontmoet je heel veel enthousiaste mensen. Wil je meer weten? "
       image="https://indicium.hu/thumbs/800x800r/2019-03/dsc-5016.jpg"
-      readMoreButtonText="Lees meer"
       :contained="true"
+      :button="{
+        text: 'Meer weten',
+        url: '/over-indicium'
+      }"
     />
   </div>
 </template>

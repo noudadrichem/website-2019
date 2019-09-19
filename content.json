@@ -10,8 +10,8 @@
           "type": "text-center"
         },
         {
-          "subTitle": "Het bestuur",
-          "description": "In bestuursjaar 2018-2019 hebben we een vierkoppig bestuur. Na hard werken aan het begin van het jaar is er een bestuur gevormd, dat natuurlijk uit alleen maar HBO-ICT-studenten bestaat.",
+          "title": "Het bestuur",
+          "description": "In bestuursjaar 2019-2020 hebben we een vierkoppig bestuur. Na hard werken aan het begin van het jaar is er een bestuur gevormd, dat natuurlijk uit alleen maar HBO-ICT-studenten bestaat.",
           "type": "text-left",
           "button": {
             "text": "Meer weten",
