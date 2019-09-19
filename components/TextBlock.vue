@@ -119,11 +119,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../assets/scss/variables.scss';
 
 .text-block {
   margin: 0 auto 32px;
+
+  .btn {
+    margin-top: 12px;
+  }
 
   &.contained {
     max-width: 928px;
@@ -143,16 +147,11 @@ export default {
 
   &.card {
     @media screen and (max-width: $bp-tablet-sm) {
-      padding: 32px;
+      padding: 24px;
     }
     padding: 48px;
-    max-width: 928px;
     box-shadow: 0 0 20px 0 rgba(124, 124, 124, 0.1);
     transition: box-shadow 300ms;
-
-    &:hover {
-      box-shadow: 0 0 20px 0 rgba(124, 124, 124, 0.3);
-    }
   }
 }
 </style>
