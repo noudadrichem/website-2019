@@ -16,11 +16,10 @@ export default {
   data: () => ({
     slickOptions: {
       initialSlide: 2,
-      slidesToShow: 4,
+      slidesToShow: 5,
       variableWidth: true,
       slidesToScroll: 1,
       centerMode: true,
-
       responsive: [{
         breakpoint: 1100,
         settings: {
@@ -45,6 +44,9 @@ export default {
       },
       {
         path: '/partners/snow-logo.svg'
+      },
+      {
+        path: '/partners/hu-logo.svg'
       }
     ]
   })
