@@ -69,7 +69,7 @@ export default {
       url: '/activiteiten'
     },
     {
-      title: Math.random() > 0.7 ? 'Over Indicium' : 'Commissies',
+      title: Math.random() > 0.6 ? 'Over Indicium' : 'Commissies',
       url: '/over-indicium'
     },
     {
@@ -88,9 +88,14 @@ export default {
 @import '../assets/scss/variables.scss';
 
 .nav {
-  opacity: 0.8;
-  background: #fff;
+  display: block;
+  z-index: 1000;
+  background: rgba(255,255,255, .9);
   box-shadow: inset 0 -2px 0 0 #cecfcf;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
 
   .logo {
     img {
@@ -113,7 +118,7 @@ export default {
         padding: 24px;
         font-size: 1rem;
         font-weight: 500;
-        color: #8D8F91;
+        color: var(--text-color);
         text-align: center;
         text-decoration: none;
       }

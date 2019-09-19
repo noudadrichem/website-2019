@@ -10,7 +10,7 @@ export default {
     host: '0.0.0.0'
   },
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Indicium - De studievereniging voor ICT bij Hogeschool Utrecht',
     meta: [{
       charset: 'utf-8'
     },

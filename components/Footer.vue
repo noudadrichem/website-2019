@@ -51,16 +51,16 @@ export default {
         title: 'Inschrijven',
         link: 'https://docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform'
       },
-      {
-        title: 'Vacatures',
-        link: '#'
-      },
+      // {
+      //   title: 'Vacatures',
+      //   link: '#'
+      // },
       {
         title: 'Statuten',
         link: '/statuten'
       },
       {
-        title: 'Over',
+        title: 'Over Indicium',
         link: '/over-indicium'
       },
       {

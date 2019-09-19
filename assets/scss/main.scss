@@ -8,6 +8,7 @@ body {
   color: var(--text-color);
   overflow-x: hidden;
   max-width: 100vw;
+  padding-top: 64px;
 }
 
 ul {
@@ -35,5 +36,24 @@ img,
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-direction: forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    opacity: 1;
+    transform: translateZ(0);
   }
 }

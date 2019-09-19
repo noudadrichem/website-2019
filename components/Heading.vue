@@ -11,9 +11,9 @@
     <div class="heading-content">
       <img class="logo" src="/logo/indicium-logo-top.svg" alt="Indicium Logo" />
 
-      <h1>Wij zijn de <span class="bold">studie</span>vereniging voor HBO-ICT van Hogeschool Utrecht</h1>
+      <h1 class="fadeInUp">Wij zijn de <span class="bold">studie</span>vereniging voor HBO-ICT van Hogeschool Utrecht</h1>
 
-      <div class="buttons">
+      <div class="buttons fadeInUp">
         <Button size="l" url="https://docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform">
           Wordt lid
         </Button>

@@ -123,11 +123,7 @@ export default {
 @import '../assets/scss/variables.scss';
 
 .text-block {
-  margin: 0 auto 32px;
-
-  .btn {
-    margin-top: 12px;
-  }
+  margin: 0 auto 48px;
 
   &.contained {
     max-width: 928px;
