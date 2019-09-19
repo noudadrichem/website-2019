@@ -15,8 +15,8 @@ export default {
   name: 'Sponsoren',
   data: () => ({
     slickOptions: {
-      initialSlide: 3,
-      slidesToShow: 7,
+      initialSlide: 2,
+      slidesToShow: 4,
       variableWidth: true,
       slidesToScroll: 1,
       centerMode: true,
@@ -38,22 +38,13 @@ export default {
         path: '/partners/axians-logo.png'
       },
       {
-        path: '/partners/bpm-logo.png'
+        path: '/partners/logo_cegeka.png'
       },
       {
-        path: '/partners/cambridgebar-logo.png'
-      },
-      {
-        path: '/partners/ordina-logo.svg'
-      },
-      {
-        path: '/partners/experius-logo.png'
+        path: '/partners/moneymonk-logo.png'
       },
       {
         path: '/partners/snow-logo.svg'
-      },
-      {
-        path: '/partners/sogeti-logo.svg'
       }
     ]
   })
