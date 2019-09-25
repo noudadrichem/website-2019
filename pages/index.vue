@@ -44,7 +44,6 @@
 import Heading from '../components/Heading'
 import Sponsoren from '../components/Sponsoren'
 import TextBlock from '../components/TextBlock'
-import ImageBlock from '../components/ImageBlock'
 import Events from '../components/Events'
 
 export default {
@@ -53,7 +52,6 @@ export default {
     Heading,
     Sponsoren,
     TextBlock,
-    ImageBlock,
     Events
   },
   head() {
