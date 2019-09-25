@@ -77,7 +77,7 @@ export default {
               title: evt.attributes.title,
               description: this.stripHTMLFromString(evt.attributes.contentblocks[0].content),
               date: new Date(evt.attributes.start).getTime() / 1000,
-              url: `evenement/${evt.attributes.slug}`,
+              url: `https://old.indicium.hu/evenement/${evt.attributes.slug}`,
               categories: evt.attributes.categories
             }))
 
