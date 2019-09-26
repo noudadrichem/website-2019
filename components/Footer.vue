@@ -88,6 +88,7 @@ footer {
   background: #DBEFF4;
   padding: 80px;
   color: var(--text-color);
+  margin-top: 32px;
 
   @media screen and (max-width: $bp-tablet-sm) {
     padding: 12px;

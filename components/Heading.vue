@@ -3,7 +3,7 @@
     <AnimatedLine :top="0" right="-10px" :interval="2000" :doHideMobile="true" />
     <AnimatedLine right="75px" :bottom="0" :interval="4000" :rotate="90" :doHideMobile="true" />
     <AnimatedLine right="115px" :bottom="0" :interval="6000" :rotate="90" :doHideMobile="true" />
-    <AnimatedLine :left="0" top="28px" :interval="8000" :rotate="180" :doHideMobile="true" />
+    <AnimatedLine left="-16px" top="28px" :interval="8000" :rotate="180" :doHideMobile="true" />
 
     <AnimatedLine left="-10%" bottom="28px" :interval="2500" :rotate="180" :doHideMobile="false" />
     <AnimatedLine left="40vw" top="2px" :interval="3500" :rotate="45" :doHideMobile="false" />
