@@ -6,14 +6,14 @@
 
     <div class="categories">
       <ul>
-        <li v-for="(category, idx) in allCategories" :key="idx">
+        <li v-for="(category, idx) in allCategories" :key="idx" @click="filterCategories(category)" :class="{ 'in-active': !activeCategories.includes(category.courseTitle) }">
           <span :style="{backgroundColor: `#${category.hex}`}"></span>{{ category.courseTitle }}
         </li>
       </ul>
     </div>
 
     <div v-if="!isLoading && events.length > 0" class="events">
-      <EventTile v-for="(event, idx) in events" :key="idx" :event="event" :allCategories="allCategories" />
+      <EventTile v-for="(event, idx) in filteredEvents" :key="idx" :event="event" :allCategories="allCategories" />
     </div>
     <Loading v-else-if="isLoading" />
     <div v-else-if="!isLoading && events.length === 0">
@@ -26,6 +26,73 @@
 import axios from 'axios'
 import EventTile from './EventTile'
 import Loading from './Loading'
+const sample_events = [{
+    "id": "32",
+    "type": "events",
+    "attributes": {
+      "slug": "code-dive",
+      "datecreated": "2019-09-19T11:25:37+02:00",
+      "datechanged": "2019-09-20T15:46:37+02:00",
+      "datepublish": "2019-09-19T11:24:51+02:00",
+      "datedepublish": "",
+      "ownerid": "15",
+      "status": "published",
+      "templatefields": [],
+      "title": "Test 1                                                                                b ",
+      "start": "2019-11-19T00:00:00+01:00",
+      "end": "2019-11-23T00:00:00+01:00",
+      "categories": [
+        "SD",
+        "TI",
+      ],
+      "incomingrelation": "",
+      "contentblocks": [{
+        "content": "<p>TESTTT</p>",
+        "image": {
+          "file": "",
+          "url": "https:\/\/old.indicium.hu\/files\/",
+          "thumbnail": "https:\/\/old.indicium.hu\/thumbs\/400x300\/"
+        },
+        "outline": "right",
+        "_block": "section"
+      }]
+    }
+  },
+  {
+    "id": "33",
+    "type": "events",
+    "attributes": {
+      "slug": "code-dive",
+      "datecreated": "2019-09-19T11:25:37+02:00",
+      "datechanged": "2019-09-20T15:46:37+02:00",
+      "datepublish": "2019-09-19T11:24:51+02:00",
+      "datedepublish": "",
+      "ownerid": "15",
+      "status": "published",
+      "templatefields": [],
+      "title": "Test 2",
+      "start": "2019-11-19T00:00:00+01:00",
+      "end": "2019-11-23T00:00:00+01:00",
+      "categories": [
+        "SD",
+        "AI",
+        "BIM",
+        "SNE",
+      ],
+      "incomingrelation": "",
+      "contentblocks": [{
+        "content": "<p>TESTTT 22</p>",
+        "image": {
+          "file": "",
+          "url": "https:\/\/old.indicium.hu\/files\/",
+          "thumbnail": "https:\/\/old.indicium.hu\/thumbs\/400x300\/"
+        },
+        "outline": "right",
+        "_block": "section"
+      }]
+    },
+  }
+]
 
 export default {
   name: 'Events',
@@ -36,6 +103,8 @@ export default {
   data: () => ({
     isLoading: true,
     events: [],
+    filteredEvents: [],
+    activeCategories: ['SD', 'TI', 'SNE', 'BIM', 'AI'],
     allCategories: [
       {
         courseTitle: 'SD',
@@ -77,13 +146,43 @@ export default {
               title: evt.attributes.title,
               description: this.stripHTMLFromString(evt.attributes.contentblocks[0].content),
               date: new Date(evt.attributes.start).getTime() / 1000,
-              url: `evenement/${evt.attributes.slug}`,
+              url: `https://old.indicium.hu/evenement/${evt.attributes.slug}`,
               categories: evt.attributes.categories
             }))
 
           this.$set(this, 'isLoading', false)
           this.$set(this, 'events', featureEvents)
         })
+        .then(this.addSampleEvents)
+        .then(() => this.$set(this, 'filteredEvents', this.events))
+    },
+    addSampleEvents() {
+      const mappedEvt = sample_events.map(evt => ({
+        title: evt.attributes.title,
+        description: this.stripHTMLFromString(evt.attributes.contentblocks[0].content),
+        date: new Date(evt.attributes.start).getTime() / 1000,
+        url: `https://old.indicium.hu/evenement/${evt.attributes.slug}`,
+        categories: evt.attributes.categories
+      }))
+
+      this.$set(this, 'events', [...this.events, ...mappedEvt])
+    },
+    filterCategories({ courseTitle }) {
+      const catIdx = this.activeCategories.indexOf(courseTitle)
+      if(this.activeCategories.includes(courseTitle)) {
+        this.activeCategories.splice(catIdx, 1)
+      } else {
+        this.activeCategories.push(courseTitle)
+      }
+      this.filterEventsByCategory(courseTitle)
+    },
+    filterEventsByCategory(courseTitle) {
+      const filteredEvents = this.events.filter(evt => {
+        // return evt.categories.includes(courseTitle)
+        return evt
+      })
+      console.log({ filteredEvents })
+      this.$set(this, 'filteredEvents', filteredEvents)
     }
   }
 }
@@ -107,6 +206,10 @@ export default {
         align-items: center;
         padding: 16px;
 
+        &.in-active span {
+          background-color: lightgrey !important;
+        }
+
         @media screen and (max-width: $bp-tablet-sm) {
           padding: 8px;
         }
@@ -117,12 +220,8 @@ export default {
           height: 24px;
           background-color: #f2f2f2;
           margin-right: 8px;
-          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px 0 rgba(186, 186, 186, .3);
           transition: box-shadow 300ms;
-
-          &:hover {
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-          }
 
         }
       }
