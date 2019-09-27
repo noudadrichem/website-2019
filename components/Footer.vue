@@ -75,6 +75,10 @@ export default {
         title: 'Sponsoren en partners',
         link: '/partners'
       },
+      {
+        title: 'Privacy policy',
+        link: '/privacypolicy'
+      }
     ]
   })
 
