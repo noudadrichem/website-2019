@@ -50,10 +50,20 @@ export default {
     this.$set(this, 'page', pageData)
     console.log({ pageData })
   },
-  head() {
+    head() {
     return {
-      title: this.page !== undefined ? (this.page.title !== undefined ? this.page.title : 'Indicium') : 'Indicium'
-    }
+      title: this.page.title !== undefined ? this.page.title : content.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            this.page.description !== undefined
+              ? this.page.description
+              : content.description
+        }
+      ]
+    };
   }
 }
 </script>
