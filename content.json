@@ -1,6 +1,42 @@
 {
   "pages": [
     {
+      "render": false,
+      "slug": "",
+      "title": "Home",
+      "content": [
+        {
+          "title": "Over Indicium",
+          "description": "Wij zijn dé studievereniging voor HBO-ICT van Hogeschool Utrecht. We organiseren het hele jaar door activiteiten zoals bedrijfsbezoeken, kroegcolleges, gastcolleges, lunchlezingen, en nog veel meer over allerlei verschillende onderwerpen. Maar we organiseren natuurlijk ook activiteiten voor gezelligheid! Kom eens langs op onze borrels, LAN-party's of iets anders dat we organiseren!",
+          "type": "text-center"
+        },
+        {
+          "title": "Lid zijn is meedoen!",
+          "description": "Een hoop activiteiten organiseren we voor iedereen. Maar als lid krijg je natuurlijk veel meer voordelen! Je krijgt dan korting bij activiteiten of je wordt uitgenodigd voor activiteiten die exclusief voor leden zijn. Ook kunnen we je helpen met het zoeken van een stage en kan je er altijd terecht als je ergens niet uitkomt. Interesse?",
+          "type": "text-center",
+          "button": {
+            "text": "Direct Inschrijven",
+            "url": "https: //docs.google.com/forms/d/e/1FAIpQLSeYE3T-IdYrxb1FB2wKGtltf5D16aLzsDdaW3g1IZAj5Lxj3Q/viewform"
+          }
+        },
+        {
+          "title": "Commissies?",
+          "description": "Lijkt je het leuk om de vereniging te helpen door het meeorganiseren van activiteiten, zoals borrels, feestjes, gastcolleges, lunchlezingen, reizen, of wil je je programmeerskills verbeteren? Neem eens een kijkje bij onze commissies, deze commissies bestaan uit enthousiaste leden die helpen om de vereniging draaiende te houden. Wil je meer informatie of wil je weten wat voor commissies er allemaal zijn?",
+          "type": "text-center",
+          "button": {
+            "text": "Meer weten",
+            "url": "/over-indicium"
+          }
+        },
+        {
+          "title": "extra",
+          "description": "lipsum",
+          "type": "text-center"
+        }
+      ]
+    },
+    {
+      "render": true,
       "slug": "over-indicium",
       "title": "Over Indicium",
       "content": [
@@ -35,7 +71,7 @@
         },
         {
           "subTitle": "Devcommissie",
-          "description": "De studievereniging heeft verschillende software in beheer om het werk makkelijker te maken, denk hierbij aan de ledenadministratie, een vacaturebank of de website. Bij de devcommissie ga je proberen je programmeerskills naar de next level proberen te brengen door adviezen van meerderejaars en interessante technieken.",
+          "description": "De studievereniging heeft verschillende software in beheer om het werk makkelijker te maken, denk hierbij aan de ledenadministratie, een vacaturebank of de website. Bij de devcommissie ga je proberen je programmeerskills naar de next level te brengen door adviezen van meerderejaars en interessante (nieuwe) technieken.",
           "type": "text-left",
           "card": true,
           "textLink": {
@@ -70,6 +106,7 @@
       ]
     },
     {
+      "render": true,
       "slug": "partners",
       "title": "Partners",
       "content": [
@@ -151,6 +188,7 @@
       ]
     },
     {
+      "render": true,
       "slug": "statuten",
       "title": "Statuten",
       "content": [
