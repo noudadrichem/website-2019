@@ -10,20 +10,20 @@
 </template>
 
 <script>
-import content from "../content.json";
-import { getBlockContentByTitle, getPageData } from "../utils";
+import content from '../content.json';
+import { getBlockContentByTitle, getPageData } from '../utils';
 
 export default {
   data: () => ({
-    page: getPageData("activiteiten")
+    page: getPageData('activiteiten')
   }),
   head() {
     return {
       title: this.page.title !== undefined ? this.page.title : content.title,
       meta: [
         {
-          hid: "description",
-          name: "description",
+          hid: 'description',
+          name: 'description',
           content:
             this.page.description !== undefined
               ? this.page.description

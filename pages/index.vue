@@ -37,12 +37,12 @@
 </template>
 
 <script>
-import Heading from '../components/Heading'
-import Sponsoren from '../components/Sponsoren'
-import TextBlock from '../components/TextBlock'
-import Events from '../components/Events'
-import content from '../content.json'
-import { getBlockContentByTitle, getPageData } from '../utils'
+import Heading from '../components/Heading';
+import Sponsoren from '../components/Sponsoren';
+import TextBlock from '../components/TextBlock';
+import Events from '../components/Events';
+import content from '../content.json';
+import { getBlockContentByTitle, getPageData } from '../utils';
 
 export default {
   name: 'Home',
@@ -52,7 +52,7 @@ export default {
     TextBlock,
     Events
   },
-  methods: { 
+  methods: {
     getBlockContentByTitle: getBlockContentByTitle
   },
   data: () => ({
@@ -62,9 +62,16 @@ export default {
     return {
       title: this.page.title !== undefined ? this.page.title : content.title,
       meta: [
-        { hid: 'description', name: 'description', content: this.page.description !== undefined ? this.page.description : content.description }
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            this.page.description !== undefined
+              ? this.page.description
+              : content.description
+        }
       ]
-    }
+    };
   }
-}
+};
 </script>

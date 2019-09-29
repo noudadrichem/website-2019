@@ -5,11 +5,9 @@
     <div class="flex">
       <div class="column left">
         <ul>
-          <li
-            v-for="(obj, idx) in getBlockContentByTitle('Info', page.content).list"
-            :key="idx"
-          >
-            <span class="medium">{{ obj.label }}</span>:
+          <li v-for="(obj, idx) in getBlockContentByTitle('Info', page.content).list" :key="idx">
+            <span class="medium">{{ obj.label }}</span>
+            :
             {{ obj.value }}
           </li>
         </ul>
@@ -32,11 +30,11 @@
 </template>
 
 <script>
-import Button from "../components/interactions/button";
-import { getBlockContentByTitle, getPageData } from "../utils";
+import Button from '../components/interactions/button';
+import { getBlockContentByTitle, getPageData } from '../utils';
 
 export default {
-  name: "Contact",
+  name: 'Contact',
   components: {
     Button
   },
@@ -44,15 +42,15 @@ export default {
     getBlockContentByTitle: getBlockContentByTitle
   },
   data: () => ({
-    page: getPageData("contact")
+    page: getPageData('contact')
   }),
   head() {
     return {
       title: this.page.title !== undefined ? this.page.title : content.title,
       meta: [
         {
-          hid: "description",
-          name: "description",
+          hid: 'description',
+          name: 'description',
           content:
             this.page.description !== undefined
               ? this.page.description
@@ -65,7 +63,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/variables.scss";
+@import '../assets/scss/variables.scss';
 .contact {
   padding-bottom: 64px;
 
@@ -92,7 +90,7 @@ export default {
     }
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       left: 16px;
       top: 16px;
