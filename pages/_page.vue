@@ -43,7 +43,7 @@ export default {
     page: {}
   }),
   validate({ params }) {
-    return content.pages.some(page => page.slug === params.page)
+    return content.pages.some(page => page.slug === params.page && page.render)
   },
   mounted() {
     const pageData = content.pages.find(p => p.slug === this.$route.params.page)

@@ -22,7 +22,6 @@
         type="text-center"
         title="Lid zijn is meedoen!"
         text="Een hoop activiteiten organiseren we voor iedereen. Maar als lid krijg je natuurlijk veel meer voordelen! Je krijgt dan korting bij activiteiten of je wordt uitgenodigd voor activiteiten die exclusief voor leden zijn. Ook kunnen we je helpen met het zoeken van een stage en kan je er altijd terecht als je ergens niet uitkomt. Interesse?"
-        readMoreButtonText="Word lid"
         :contained="true"
         :button="{
           text: 'Direct Inschrijven',
