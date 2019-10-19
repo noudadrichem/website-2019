@@ -5,6 +5,7 @@
     </h2>
 
     <div class="categories">
+      {{ activeCategories }}
       <ul>
         <li v-for="(category, idx) in allCategories" :key="idx" @click="filterCategories(category)" :class="{ 'in-active': !activeCategories.includes(category.courseTitle) }">
           <span :style="{backgroundColor: `#${category.hex}`}"></span>{{ category.courseTitle }}
@@ -23,6 +24,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import axios from 'axios'
 import EventTile from './EventTile'
 import Loading from './Loading'
@@ -38,7 +40,7 @@ const sample_events = [{
       "ownerid": "15",
       "status": "published",
       "templatefields": [],
-      "title": "Test 1                                                                                b ",
+      "title": "Test 1b ",
       "start": "2019-11-19T00:00:00+01:00",
       "end": "2019-11-23T00:00:00+01:00",
       "categories": [
@@ -103,7 +105,6 @@ export default {
   data: () => ({
     isLoading: true,
     events: [],
-    filteredEvents: [],
     activeCategories: ['SD', 'TI', 'SNE', 'BIM', 'AI'],
     allCategories: [
       {
@@ -130,6 +131,14 @@ export default {
   }),
   mounted() {
     this.fetchEvents()
+  },
+  computed: {
+    filteredEvents() {
+      return this.events.filter(evt => {
+        return evt.title
+      })
+      // if event categories includes non active category so is not in active category list. don't return event
+    }
   },
   methods: {
     stripHTMLFromString(str = '') {
@@ -174,15 +183,6 @@ export default {
       } else {
         this.activeCategories.push(courseTitle)
       }
-      this.filterEventsByCategory(courseTitle)
-    },
-    filterEventsByCategory(courseTitle) {
-      const filteredEvents = this.events.filter(evt => {
-        // return evt.categories.includes(courseTitle)
-        return evt
-      })
-      console.log({ filteredEvents })
-      this.$set(this, 'filteredEvents', filteredEvents)
     }
   }
 }
