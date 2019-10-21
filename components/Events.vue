@@ -17,7 +17,9 @@
     </div>
     <Loading v-else-if="isLoading" />
     <div v-else-if="!isLoading && events.length === 0">
-      <p class="center">Geen opkomende activiteiten gevonden... 😢</p>
+      <p class="center">
+        Geen opkomende activiteiten gevonden... 😢
+      </p>
     </div>
   </div>
 </template>
@@ -82,6 +84,7 @@ export default {
           const today = new Date().getTime()
           const featureEvents = events
             .filter(evt => new Date(evt.attributes.start).getTime() > today)
+            .sort((eventA, eventB) => new Date(eventA.attributes.start) - new Date(eventB.attributes.start))
             .map(evt => ({
               title: evt.attributes.title,
               description: this.stripHTMLFromString(evt.attributes.contentblocks[0].content),
@@ -112,7 +115,7 @@ export default {
 
 .events-container {
   max-width: 1084px;
-  margin: 40px auto;
+  margin: 0 auto 128px;
 
   .categories {
     ul {
