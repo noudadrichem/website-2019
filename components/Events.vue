@@ -5,7 +5,6 @@
     </h2>
 
     <div class="categories">
-      {{ activeCategories }}
       <ul>
         <li v-for="(category, idx) in allCategories" :key="idx" @click="filterCategories(category)" :class="{ 'in-active': !activeCategories.includes(category.courseTitle) }">
           <span :style="{backgroundColor: `#${category.hex}`}"></span>{{ category.courseTitle }}
@@ -28,73 +27,6 @@
 import axios from 'axios'
 import EventTile from './EventTile'
 import Loading from './Loading'
-const sample_events = [{
-    "id": "32",
-    "type": "events",
-    "attributes": {
-      "slug": "code-dive",
-      "datecreated": "2019-09-19T11:25:37+02:00",
-      "datechanged": "2019-09-20T15:46:37+02:00",
-      "datepublish": "2019-09-19T11:24:51+02:00",
-      "datedepublish": "",
-      "ownerid": "15",
-      "status": "published",
-      "templatefields": [],
-      "title": "Test 1b ",
-      "start": "2019-11-19T00:00:00+01:00",
-      "end": "2019-11-23T00:00:00+01:00",
-      "categories": [
-        "SD",
-        "TI",
-      ],
-      "incomingrelation": "",
-      "contentblocks": [{
-        "content": "<p>TESTTT</p>",
-        "image": {
-          "file": "",
-          "url": "https:\/\/old.indicium.hu\/files\/",
-          "thumbnail": "https:\/\/old.indicium.hu\/thumbs\/400x300\/"
-        },
-        "outline": "right",
-        "_block": "section"
-      }]
-    }
-  },
-  {
-    "id": "33",
-    "type": "events",
-    "attributes": {
-      "slug": "code-dive",
-      "datecreated": "2019-09-19T11:25:37+02:00",
-      "datechanged": "2019-09-20T15:46:37+02:00",
-      "datepublish": "2019-09-19T11:24:51+02:00",
-      "datedepublish": "",
-      "ownerid": "15",
-      "status": "published",
-      "templatefields": [],
-      "title": "Test 2",
-      "start": "2019-11-19T00:00:00+01:00",
-      "end": "2019-11-23T00:00:00+01:00",
-      "categories": [
-        "SD",
-        "AI",
-        "BIM",
-        "SNE",
-      ],
-      "incomingrelation": "",
-      "contentblocks": [{
-        "content": "<p>TESTTT 22</p>",
-        "image": {
-          "file": "",
-          "url": "https:\/\/old.indicium.hu\/files\/",
-          "thumbnail": "https:\/\/old.indicium.hu\/thumbs\/400x300\/"
-        },
-        "outline": "right",
-        "_block": "section"
-      }]
-    },
-  }
-]
 
 export default {
   name: 'Events',
@@ -134,10 +66,9 @@ export default {
   },
   computed: {
     filteredEvents() {
-      return this.events.filter(evt => {
-        return evt.title
+      return this.events.filter(event => {
+          return event.categories.filter(cat => this.activeCategories.includes(cat)).length > 0;
       })
-      // if event categories includes non active category so is not in active category list. don't return event
     }
   },
   methods: {
@@ -163,18 +94,6 @@ export default {
           this.$set(this, 'events', featureEvents)
         })
         .then(this.addSampleEvents)
-        .then(() => this.$set(this, 'filteredEvents', this.events))
-    },
-    addSampleEvents() {
-      const mappedEvt = sample_events.map(evt => ({
-        title: evt.attributes.title,
-        description: this.stripHTMLFromString(evt.attributes.contentblocks[0].content),
-        date: new Date(evt.attributes.start).getTime() / 1000,
-        url: `https://old.indicium.hu/evenement/${evt.attributes.slug}`,
-        categories: evt.attributes.categories
-      }))
-
-      this.$set(this, 'events', [...this.events, ...mappedEvt])
     },
     filterCategories({ courseTitle }) {
       const catIdx = this.activeCategories.indexOf(courseTitle)
