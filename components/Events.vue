@@ -3,7 +3,7 @@
     <h2 class="center">
       Opkomende activiteiten
     </h2>
-
+{{events}}
     <div class="categories">
       <ul>
         <li v-for="(category, idx) in allCategories" :key="idx" @click="filterCategories(category)" :class="{ 'in-active': !activeCategories.includes(category.courseTitle) }">
